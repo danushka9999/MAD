@@ -9,16 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SATHKAARAYA">
+        <activity android:name=".FoodAndBeverages">
+        </activity>
         <activity
             android:name=".Services"
             android:exported="true" />
-
 
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/top_animation" />
 
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
