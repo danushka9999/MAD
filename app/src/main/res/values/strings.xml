@@ -27,4 +27,12 @@
         <item>+01</item>
     </string-array>
     <string name="tv_country">Country</string>
+    <string name="tv_confirmPass">Confirm Password</string>
+    <string name="tv_passRestrictions">*password should be 8-20 characters!\n*password should have a lower case letter!\n*password should have a an upper case letter!\n*password dosent need to be meaningful!</string>
+    <string name="tv_notification">Manage Notifications</string>
+    <string name="cb_email">I would like to recive account updates,program\nnews and offers via email and direct mail.</string>
+    <string name="cb_offers">I would like to recive exclusive offers from selected\nthird parties</string>
+    <string name="tv_termsAndCon">By signing up, I agree to Sathkaraya\'s <a href="#">Terms of use</a> and <a href="#">Data privacy Center</a></string>
+    <string name="btn_notNow">NOT NOW</string>
+
 </resources>
