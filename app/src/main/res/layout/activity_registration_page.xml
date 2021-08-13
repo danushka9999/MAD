@@ -21,6 +21,7 @@
                     android:text="@string/tv_join"
                     android:textSize="30sp"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,9 +54,11 @@
                     android:layout_marginTop="72dp"
                     android:layout_marginBottom="19dp"
                     android:background="@drawable/back"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/black"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    app:layout_constraintBottom_toTopOf="@+id/textView6"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_signInEmail"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_join" />
 
@@ -64,6 +67,8 @@
                     android:layout_width="170dp"
                     android:layout_height="41dp"
                     android:layout_marginEnd="4dp"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/black"
                     android:background="@drawable/back"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -72,22 +77,26 @@
                     app:layout_constraintTop_toTopOf="@+id/et_firstName" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/tv_signInEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="188dp"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/black"
                     android:text="@string/tv_email"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
-                    android:id="@+id/et_Email"
+                    android:id="@+id/et_signInEmail"
                     android:layout_width="367dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="52dp"
                     android:layout_marginEnd="4dp"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/black"
                     android:layout_marginBottom="19dp"
                     android:background="@drawable/back"
                     android:ems="10"
@@ -115,6 +124,8 @@
                     android:layout_marginTop="424dp"
                     android:layout_marginEnd="4dp"
                     android:background="@drawable/back"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/black"
                     android:ems="10"
                     android:inputType="textPersonName"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -134,7 +145,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.225"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/et_Email"
+                    app:layout_constraintTop_toBottomOf="@+id/et_signInEmail"
                     app:layout_constraintVertical_bias="0.465" />
 
                 <TextView
@@ -184,6 +195,8 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="4dp"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/black"
                     android:background="@drawable/back"
                     android:ems="10"
                     android:inputType="textPassword"
@@ -198,6 +211,8 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="4dp"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/black"
                     android:background="@drawable/back"
                     android:ems="10"
                     android:inputType="textPassword"
@@ -262,6 +277,7 @@
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="4dp"
                     android:text="@string/tv_termsAndCon"
+                    android:textColorLink="#FF4C29"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
@@ -274,6 +290,7 @@
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="4dp"
                     android:text="@string/btn_join"
+                    android:backgroundTint="#737373"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.473"
                     app:layout_constraintStart_toStartOf="parent"
@@ -283,8 +300,9 @@
                     android:id="@+id/button2"
                     android:layout_width="367dp"
                     android:layout_height="53dp"
-                    android:layout_marginTop="14dp"
                     android:text="@string/btn_notNow"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.363"
                     app:layout_constraintStart_toStartOf="parent"

@@ -34,5 +34,8 @@
     <string name="cb_offers">I would like to recive exclusive offers from selected\nthird parties</string>
     <string name="tv_termsAndCon">By signing up, I agree to Sathkaraya\'s <a href="#">Terms of use</a> and <a href="#">Data privacy Center</a></string>
     <string name="btn_notNow">NOT NOW</string>
+    <string name="tv_signIn">Sign In</string>
+    <string name="tv_signInEmail">Email or Phone number</string>
+    <string name="cb_remMe">Remember me</string>
 
 </resources>
