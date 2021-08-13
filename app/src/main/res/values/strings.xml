@@ -2,4 +2,6 @@
     <string name="app_name">SATHKAARAYA</string>
     <string name="tv_btn_travel">Tours</string>
     <string name="imageView2">Tours Image</string>
+    <string name="tv_btn_food">Food and
+        Beverages</string>
 </resources>
