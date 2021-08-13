@@ -3,4 +3,28 @@
     <string name="tv_btn_travel">Tours</string>
     <string name="btn_join">Join</string>
     <string name="btn_SignIn">Sign in</string>
+    <string name="tv_join">Join</string>
+    <string name="tv_firstName">First Name</string>
+    <string name="tv_lastName">Last Name</string>
+    <string name="tv_email">Email</string>
+    <string name="tv_phone_num">Phone Number</string>
+    <string name="tv_password">Password</string>
+
+    <string-array name="countryNames">
+        <item>Country</item>
+        <item>Sri Lanka</item>
+        <item>India</item>
+        <item>Canada</item>
+        <item>Germany</item>
+        <item>Australia</item>
+    </string-array>
+    <string-array name="countryCodes">
+        <item>+94</item>
+        <item>+11</item>
+        <item>+96</item>
+        <item>+23</item>
+        <item>+12</item>
+        <item>+01</item>
+    </string-array>
+    <string name="tv_country">Country</string>
 </resources>
