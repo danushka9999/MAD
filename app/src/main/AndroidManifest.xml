@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SATHKAARAYA">
+        <activity android:name=".WhereTo"></activity>
         <activity
             android:name=".Services"
             android:exported="true" />

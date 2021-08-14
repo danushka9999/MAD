@@ -1,5 +1,24 @@
 <resources>
     <string name="app_name">SATHKAARAYA</string>
-    <string name="tv_packages">packages</string>
+    <string name="et_whereto">Where are you doing?</string>
+    <string name="tv_hikkaduwa">Hikkaduwa</string>
+    <string name="tv_yala">Yala</string>
+    <string name="tv_selPckg">SELECT PACKAGE</string>
+    <string name="tv_calander">WHEN WILL YOU BE THERE?</string>
+    <string name="tv_form">ENTER DETAILS</string>
+    <string name="et_name">Name</string>
+    <string name="et_roomNo">Room No</string>
+    <string name="tv_adults">Adults</string>
+    <string name="tv_children">Children</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_book">Book</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="tv_honeymoonIsland">Honeymoon Island</string>
+    <string name="tv_checkin">CHECK-IN</string>
+    <string name="tv_checkout">CHECK-OUT</string>
+    <string name="tv_pckg">PACAKGE</string>
+    <string name="tv_tax">TAX</string>
+    <string name="tv_sevchrge">SERVICE CHARGE</string>
+
 
 </resources>
