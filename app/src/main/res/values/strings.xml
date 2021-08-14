@@ -18,7 +18,6 @@
     <string name="tv_checkout">CHECK-OUT</string>
     <string name="tv_pckg">PACAKGE</string>
     <string name="tv_tax">TAX</string>
-    <string name="tv_sevchrge">SERVICE CHARGE</string>
-
+    <string name="tv_servchrge">SERVICE CHARGE</string>
 
 </resources>
