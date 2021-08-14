@@ -37,5 +37,7 @@
     <string name="tv_signIn">Sign In</string>
     <string name="tv_signInEmail">Email or Phone number</string>
     <string name="cb_remMe">Remember me</string>
+    <string name="tv_userProfile">User Profile</string>
+    <string name="tv_edit">Edit</string>
 
 </resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/personBN"
+        android:enabled="true"
+        android:icon="@drawable/baseline_person"
+        android:title="Home"/>
+    <item
+        android:id="@+id/dashboardBN"
+        android:enabled="true"
+        android:icon="@drawable/baseline_dashbord"
+        android:title="Services"/>
+    <item
+        android:id="@+id/receiptBN"
+        android:enabled="true"
+        android:icon="@drawable/baseline_reciept"
+        android:title="Receipt"/>
+
+</menu>
