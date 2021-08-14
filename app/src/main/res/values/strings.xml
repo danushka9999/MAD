@@ -9,4 +9,18 @@
     <string name="tv_bvg">Beverages</string>
     <string name="tv_app_title">Food and Beverages</string>
     <string name="textView4">Services</string>
+    <string name="tv_HeavyMeals_appBar">Heavy Meals</string>
+    <string name="tv_heading_fbForm">You can make your order here</string>
+    <string name="et_hint_cName">Enter your name</string>
+    <string name="et_roomNo">Enter your room number</string>
+    <string name="etn_tpnumber">Enter your contact number</string>
+    <string name="tv_CustomerName">Customer Name:</string>
+    <string name="tv_roonNo">Room No:</string>
+    <string name="tv_contactnum">Contact No:</string>
+    <string name="tv_foodItem">Select Food Item</string>
+    <string name="tv_qty">Quantity:</string>
+    <string name="btn_qty_add">+</string>
+    <string name="btn_qty_sub">-</string>
+    <string name="btn_proceed">PROCEED</string>
+    <string name="hint_qty">Quantity</string>
 </resources>
