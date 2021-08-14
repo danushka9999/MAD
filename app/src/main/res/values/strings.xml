@@ -2,15 +2,11 @@
     <string name="app_name">SATHKAARAYA</string>
     <string name="tv_btn_travel">Tours</string>
     <string name="imageView2">Tours Image</string>
-    <string name="tv_btn_food">Food and
-        Beverages</string>
+    <string name="tv_btn_food">Food and Beverages</string>
     <string name="tv_btn_gym">Gymnasium and Shop</string>
-<<<<<<< HEAD
     <string name="tv_hvyMeal">Heavy Meals</string>
     <string name="tv_snack">Snacks</string>
     <string name="tv_bvg">Beverages</string>
     <string name="tv_app_title">Food and Beverages</string>
-=======
     <string name="textView4">Services</string>
->>>>>>> 16ab454e0e49691961877342676ef33aa7e69f56
 </resources>
