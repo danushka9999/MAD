@@ -9,10 +9,12 @@
         android:id="@+id/dashboardBN"
         android:enabled="true"
         android:icon="@drawable/baseline_dashbord"
+        android:icon="@drawable/baseline_dashboard"
         android:title="Services"/>
     <item
         android:id="@+id/receiptBN"
         android:enabled="true"
+        android:icon="@drawable/baseline_receipt"
         android:icon="@drawable/baseline_reciept"
         android:title="Receipt"/>
 

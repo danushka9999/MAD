@@ -13,6 +13,8 @@
         <activity android:name=".LoginPage" />
         <activity android:name=".RegistrationPage" />
         <activity android:name=".userLanding" />
+        <activity android:name=".HeavyMeals"></activity>
+        <activity android:name=".FoodAndBeverages" />
         <activity
             android:name=".Services"
             android:exported="true" />
