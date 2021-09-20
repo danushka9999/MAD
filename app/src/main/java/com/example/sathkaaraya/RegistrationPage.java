@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 public class RegistrationPage extends AppCompatActivity {
+   Button button;
 
     private static int ScrenOnTime = 4000;
 
@@ -16,7 +18,6 @@ public class RegistrationPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_page);
-
         Spinner countrySpinner=(Spinner) findViewById(R.id.countrySpinner);
         ArrayAdapter<String> countryAdapter=new ArrayAdapter<String>(RegistrationPage.this,
             android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.countryNames));

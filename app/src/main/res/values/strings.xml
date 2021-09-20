@@ -9,7 +9,6 @@
     <string name="tv_email">Email</string>
     <string name="tv_phone_num">Phone Number</string>
     <string name="tv_password">Password</string>
-
     <string-array name="countryNames">
         <item>Country</item>
         <item>Sri Lanka</item>
@@ -28,7 +27,8 @@
     </string-array>
     <string name="tv_country">Country</string>
     <string name="tv_confirmPass">Confirm Password</string>
-    <string name="tv_passRestrictions">*password should be 8-20 characters!\n*password should have a lower case letter!\n*password should have a an upper case letter!\n*password dosent need to be meaningful!</string>
+    <string name="tv_passRestrictions">*password should be 8-20 characters!\n*password should have a lower case letter!
+        \n*password should have a an upper case letter!\n*password dosent need to be meaningful!</string>
     <string name="tv_notification">Manage Notifications</string>
     <string name="cb_email">I would like to recive account updates,program\nnews and offers via email and direct mail.</string>
     <string name="cb_offers">I would like to recive exclusive offers from selected\nthird parties</string>
@@ -39,5 +39,8 @@
     <string name="cb_remMe">Remember me</string>
     <string name="tv_userProfile">User Profile</string>
     <string name="tv_edit">Edit</string>
-
+    <string name="tv_receipts">Receipt</string>
+    <string name="tv_tours">Tours</string>
+    <string name="tv_foodAndBreverages">Food and Breverages</string>
+    <string name="gymAndActivities">Gym and Activities</string>
 </resources>
