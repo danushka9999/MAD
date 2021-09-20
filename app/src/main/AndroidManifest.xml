@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SATHKAARAYA">
+        <activity android:name=".userProfile"></activity>
+        <activity android:name=".LoginPage" />
+        <activity android:name=".RegistrationPage" />
+        <activity android:name=".userLanding" />
         <activity android:name=".HeavyMeals"></activity>
         <activity android:name=".FoodAndBeverages" />
         <activity

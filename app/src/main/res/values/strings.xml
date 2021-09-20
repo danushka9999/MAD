@@ -1,6 +1,48 @@
 <resources>
     <string name="app_name">SATHKAARAYA</string>
     <string name="tv_btn_travel">Tours</string>
+    <string name="btn_join">Join</string>
+    <string name="btn_SignIn">Sign in</string>
+    <string name="tv_join">Join</string>
+    <string name="tv_firstName">First Name</string>
+    <string name="tv_lastName">Last Name</string>
+    <string name="tv_email">Email</string>
+    <string name="tv_phone_num">Phone Number</string>
+    <string name="tv_password">Password</string>
+    <string-array name="countryNames">
+        <item>Country</item>
+        <item>Sri Lanka</item>
+        <item>India</item>
+        <item>Canada</item>
+        <item>Germany</item>
+        <item>Australia</item>
+    </string-array>
+    <string-array name="countryCodes">
+        <item>+94</item>
+        <item>+11</item>
+        <item>+96</item>
+        <item>+23</item>
+        <item>+12</item>
+        <item>+01</item>
+    </string-array>
+    <string name="tv_country">Country</string>
+    <string name="tv_confirmPass">Confirm Password</string>
+    <string name="tv_passRestrictions">*password should be 8-20 characters!\n*password should have a lower case letter!
+        \n*password should have a an upper case letter!\n*password dosent need to be meaningful!</string>
+    <string name="tv_notification">Manage Notifications</string>
+    <string name="cb_email">I would like to recive account updates,program\nnews and offers via email and direct mail.</string>
+    <string name="cb_offers">I would like to recive exclusive offers from selected\nthird parties</string>
+    <string name="tv_termsAndCon">By signing up, I agree to Sathkaraya\'s <a href="#">Terms of use</a> and <a href="#">Data privacy Center</a></string>
+    <string name="btn_notNow">NOT NOW</string>
+    <string name="tv_signIn">Sign In</string>
+    <string name="tv_signInEmail">Email or Phone number</string>
+    <string name="cb_remMe">Remember me</string>
+    <string name="tv_userProfile">User Profile</string>
+    <string name="tv_edit">Edit</string>
+    <string name="tv_receipts">Receipt</string>
+    <string name="tv_tours">Tours</string>
+    <string name="tv_foodAndBreverages">Food and Breverages</string>
+    <string name="gymAndActivities">Gym and Activities</string>
     <string name="imageView2">Tours Image</string>
     <string name="tv_btn_food">Food and Beverages</string>
     <string name="tv_btn_gym">Gymnasium and Shop</string>
