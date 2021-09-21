@@ -9,22 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SATHKAARAYA">
-        <activity android:name=".ShowDetails"></activity>
-        <activity
-            android:name=".DetailsForm"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".userProfile" />
+        <activity android:name=".userProfile"></activity>
         <activity android:name=".LoginPage" />
         <activity android:name=".RegistrationPage" />
         <activity android:name=".userLanding" />
-        <activity android:name=".HeavyMeals" />
+        <activity android:name=".HeavyMeals"></activity>
         <activity android:name=".FoodAndBeverages" />
+        <activity android:name=".ShowDetails"></activity>
+        <activity android:name=".DetailsForm"></activity>
+
         <activity
             android:name=".Services"
             android:exported="true" />
@@ -33,15 +26,14 @@
             android:name="com.google.android.actions"
             android:resource="@xml/top_animation" />
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <!-- android:exported="true"> -->
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

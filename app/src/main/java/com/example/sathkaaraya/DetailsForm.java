@@ -23,7 +23,7 @@ public class DetailsForm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_form);
-        getSupportActionBar().hide(); //to hide the action bar
+
 
         et_name = findViewById(R.id.et_name);
         et_roomNo = findViewById(R.id.et_roomNo);
@@ -49,19 +49,19 @@ public class DetailsForm extends AppCompatActivity {
     public void CreateData(View view){
         dbRef = FirebaseDatabase.getInstance().getReference().child("FormDetails");
         try{
-            if(TextUtils.isEmpty(et_name.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter the name", Toast.LENGTH_SHORT).show();
-            else if(TextUtils.isEmpty(et_roomNo.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter the room number", Toast.LENGTH_SHORT).show();
-            else if(TextUtils.isEmpty(et_startDate.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter the starting date", Toast.LENGTH_SHORT).show();
-            else if(TextUtils.isEmpty(et_endingDate.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter the ending date", Toast.LENGTH_SHORT).show();
-            else if(TextUtils.isEmpty(et_NoOfAdults.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter the No Of Adults", Toast.LENGTH_SHORT).show();
-            else if(TextUtils.isEmpty(et_NoOfChildren.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter the No of Children", Toast.LENGTH_SHORT).show();
-            else{
+//            if(TextUtils.isEmpty(et_name.getText().toString()))
+//                Toast.makeText(getApplicationContext(), "Please enter the name", Toast.LENGTH_SHORT).show();
+//            else if(TextUtils.isEmpty(et_roomNo.getText().toString()))
+//                Toast.makeText(getApplicationContext(), "Please enter the room number", Toast.LENGTH_SHORT).show();
+//            else if(TextUtils.isEmpty(et_startDate.getText().toString()))
+//                Toast.makeText(getApplicationContext(), "Please enter the starting date", Toast.LENGTH_SHORT).show();
+//            else if(TextUtils.isEmpty(et_endingDate.getText().toString()))
+//                Toast.makeText(getApplicationContext(), "Please enter the ending date", Toast.LENGTH_SHORT).show();
+//            else if(TextUtils.isEmpty(et_NoOfAdults.getText().toString()))
+//                Toast.makeText(getApplicationContext(), "Please enter the No Of Adults", Toast.LENGTH_SHORT).show();
+//            else if(TextUtils.isEmpty(et_NoOfChildren.getText().toString()))
+//                Toast.makeText(getApplicationContext(), "Please enter the No of Children", Toast.LENGTH_SHORT).show();
+//            else{
                 //take inputs from the user and assigning them to this instance (formObj) of the FormDetails..
                 formObj.setName(et_name.getText().toString().trim());
                 formObj.setRoomNo(Integer.parseInt(et_roomNo.getText().toString().trim()));
@@ -76,7 +76,7 @@ public class DetailsForm extends AppCompatActivity {
                 //feedback to the user via a toast..
                 Toast.makeText(getApplicationContext(), "Data saved successfully", Toast.LENGTH_SHORT).show();
                 clearControls();
-            }
+//            }
 
         }catch (Exception e){
             Toast.makeText(getApplicationContext(), "invalid room number" + e, Toast.LENGTH_SHORT).show();
