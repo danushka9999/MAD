@@ -59,10 +59,14 @@
     <string name="tv_CustomerName">Customer Name:</string>
     <string name="tv_roonNo">Room No:</string>
     <string name="tv_contactnum">Contact No:</string>
-    <string name="tv_foodItem">Select Food Item</string>
+    <string name="tv_foodItem">Food Item</string>
     <string name="tv_qty">Quantity:</string>
     <string name="btn_qty_add">+</string>
     <string name="btn_qty_sub">-</string>
     <string name="btn_proceed">PROCEED</string>
     <string name="hint_qty">Quantity</string>
+    <string name="tv_unitPrice">Unit Price:</string>
+    <string name="btn_purchase">PURCHASE</string>
+    <string name="hint_tot">Total Price</string>
+    <string name="tv_mealOrderTopic">Order Your Meal Here</string>
 </resources>
