@@ -14,23 +14,31 @@
         <activity android:name=".RegistrationPage" />
         <activity android:name=".userLanding" />
         <activity android:name=".HeavyMeals"></activity>
-        <activity android:name=".FoodAndBeverages" />
-        <activity
-            android:name=".Services"
-            android:exported="true" />
-
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/top_animation" />
-
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".FoodAndBeverages"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Services"/>
+<!--            android:exported="true" />-->
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/top_animation" />
+
+        <activity
+            android:name=".MainActivity">
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
     </application>
 

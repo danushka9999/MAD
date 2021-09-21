@@ -52,13 +52,15 @@
         android:layout_width="348dp"
         android:layout_height="144dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="onClick"
         app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_snacks"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appBarLayout">
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
         <TextView
             android:id="@+id/tv_heavy_meal"
@@ -93,11 +95,11 @@
         android:layout_width="336dp"
         android:layout_height="161dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
         app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cv_heavyMeals">
 
@@ -137,6 +139,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="16dp"
         app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
