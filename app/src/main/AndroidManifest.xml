@@ -15,6 +15,9 @@
         <activity android:name=".userLanding" />
         <activity android:name=".HeavyMeals"></activity>
         <activity android:name=".FoodAndBeverages" />
+        <activity android:name=".ShowDetails"></activity>
+        <activity android:name=".DetailsForm"></activity>
+
         <activity
             android:name=".Services"
             android:exported="true" />

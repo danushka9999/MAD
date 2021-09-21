@@ -65,6 +65,22 @@
     <string name="btn_qty_sub">-</string>
     <string name="btn_proceed">PROCEED</string>
     <string name="hint_qty">Quantity</string>
+    <string name="title_activity_enterdetails">enterdetails</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="et_name">Name</string>
+    <string name="et_startingDate">Starting Date</string>
+    <string name="btn_send">Send</string>
+    <string name="et_endingDate">Ending Date</string>
+    <string name="et_NoOfAdults">Adults</string>
+    <string name="et_NoOfChildren">Children</string>
+    <string name="tv_enterDetails">Enter Details</string>
     <string name="tv_unitPrice">Unit Price:</string>
     <string name="btn_purchase">PURCHASE</string>
     <string name="hint_tot">Total Price</string>

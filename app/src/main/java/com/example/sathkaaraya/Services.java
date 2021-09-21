@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 
 public class Services extends AppCompatActivity {
 
@@ -14,5 +15,9 @@ public class Services extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
 
+    }
+
+    public void detailsForm(View view){
+        startActivity(new Intent(this, DetailsForm.class));
     }
 }
