@@ -14,11 +14,9 @@
         <activity android:name=".RegistrationPage" />
         <activity android:name=".userLanding" />
         <activity android:name=".HeavyMeals"></activity>
-        <activity android:name=".FoodAndBeverages">
-        </activity>
-
+        <activity android:name=".FoodAndBeverages" />
         <activity
-            android:name=".Services"/>
+            android:name=".Services"
             android:exported="true" />
 
         <meta-data
@@ -26,7 +24,7 @@
             android:resource="@xml/top_animation" />
 
         <activity
-            android:name=".MainActivity">
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
