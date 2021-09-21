@@ -26,10 +26,10 @@ public class RegistrationPage extends AppCompatActivity {
    Button save;
    EditText firstName,lastName,email,phoneNumber,password;
    Spinner country,phoneCode;
-    registrationDetails register;
-    DatabaseReference dbref;
+   registrationDetails register;
+   DatabaseReference dbref;
 
-    private static int ScrenOnTime = 30000;
+
     private FirebaseAuth mAuth;
 
 
@@ -51,14 +51,6 @@ public class RegistrationPage extends AppCompatActivity {
                 android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.countryCodes));
         countryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         countryCodeSpinner.setAdapter(countryCodeAdapter);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(RegistrationPage.this,LoginPage.class);
-                startActivity(intent);
-                finish();
-            }
-        },ScrenOnTime);
 
     }
 

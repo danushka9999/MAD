@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="signIn"
     tools:context=".LoginPage">
 
     <TextView
@@ -13,9 +14,9 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="32dp"
         android:text="@string/btn_SignIn"
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,24 +81,25 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textCursorDrawable="@null"
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
         android:text="@string/tv_password"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_signInEmail" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/et_signInPass"
         android:layout_width="367dp"
         android:layout_height="45dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/back"
         android:ems="10"
         android:inputType="textPersonName"
+        android:onClick="signIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,14 +115,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/et_signInPass" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_signin"
         android:layout_width="367dp"
         android:layout_height="53dp"
         android:layout_marginTop="32dp"
         android:backgroundTint="#737373"
+        android:onClick="signIn"
         android:text="@string/btn_SignIn"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,6 +142,6 @@
         android:textColor="#737373"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
