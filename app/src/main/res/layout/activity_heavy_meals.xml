@@ -4,9 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/formo"
     android:backgroundTintMode="screen"
     tools:context=".HeavyMeals">
+
+    <EditText
+        android:id="@+id/et_foodItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.286"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_foodItem" />
+
+    <TextView
+        android:id="@+id/tv_foodItem"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="488dp"
+        android:text="@string/tv_foodItem"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_qty"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="592dp"
+        android:text="@string/tv_qty"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_qty2"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
+        android:text="@string/tv_unitPrice"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_qty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -20,7 +66,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/black"
+            android:background="@color/orange"
             android:minHeight="?attr/actionBarSize">
 
             <TextView
@@ -36,140 +82,99 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <Button
-        android:id="@+id/btn_sub"
-        android:layout_width="70dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="64dp"
-        android:text="@string/btn_qty_sub"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/etn_qty"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <TextView
-        android:id="@+id/tv_formHMeals"
-        android:layout_width="295dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/tv_heading_fbForm"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/black"
-        android:textSize="24sp"
+        android:id="@+id/tv_roomNo"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="376dp"
+        android:text="@string/tv_roonNo"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_custName"
-        android:layout_width="312dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/et_roomNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="@string/et_hint_cName"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.286"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_custName" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_roomNo" />
 
     <EditText
-        android:id="@+id/etn_tele"
-        android:layout_width="310dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/et_qty"
+        android:layout_width="104dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="@string/etn_tpnumber"
         android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_contact" />
-
-    <Spinner
-        android:id="@+id/spinner_food"
-        android:layout_width="310dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_food" />
-
-    <TextView
-        android:id="@+id/tv_custName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="132dp"
-        android:text="@string/tv_CustomerName"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_contact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="220dp"
-        android:text="@string/tv_contactnum"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="332dp"
-        android:text="@string/tv_foodItem"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_qty"
-        android:layout_width="70dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="448dp"
-        android:text="@string/tv_qty"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etn_qty"
-        android:layout_width="118dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/hint_qty"
-        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_qty" />
 
-    <Button
-        android:id="@+id/btn_add"
-        android:layout_width="70dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="196dp"
-        android:text="@string/btn_qty_add"
-        app:layout_constraintBaseline_toBaselineOf="@+id/etn_qty"
+    <EditText
+        android:id="@+id/et_unitPrice"
+        android:layout_width="104dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_qty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.719"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/et_totalPrice"
+        android:layout_width="131dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/hint_tot"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_qty" />
+
     <Button
-        android:id="@+id/btn_proceed"
-        android:layout_width="108dp"
-        android:layout_height="56dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/btn_proceed"
+        android:id="@+id/btn_purchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="purchase"
+        android:text="@string/btn_purchase"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_totalPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_foodorder"
+        android:layout_width="326dp"
+        android:layout_height="233dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.136"
+        app:srcCompat="@drawable/fooorder" />
+
+    <TextView
+        android:id="@+id/tv_mealOrder_topic"
+        android:layout_width="347dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/tv_mealOrderTopic"
+        android:textColor="@color/grey"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
