@@ -78,8 +78,8 @@ public class DetailsForm extends AppCompatActivity {
                 clearControls();
             }
 
-        }catch (NumberFormatException e){
-            Toast.makeText(getApplicationContext(), "invalid room number", Toast.LENGTH_SHORT).show();
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), "invalid room number" + e, Toast.LENGTH_SHORT).show();
 
         }
     }
