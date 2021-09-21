@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "249206378722",
+    "firebase_url": "https://deskdemons-mad-default-rtdb.firebaseio.com",
+    "project_id": "deskdemons-mad",
+    "storage_bucket": "deskdemons-mad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249206378722:android:00d7171c748ab182070ebb",
+        "android_client_info": {
+          "package_name": "com.example.sathkaaraya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249206378722-oq831ao4ahq8sjti5phc4tf18isfntej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0BCAp8QUWk8U3xYt1RIBM5rDVBJpw9Bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249206378722-oq831ao4ahq8sjti5phc4tf18isfntej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
