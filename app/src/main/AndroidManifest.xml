@@ -9,15 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SATHKAARAYA">
-        <activity android:name=".userProfile"></activity>
+        <activity
+            android:name=".GymAndActivities"
+            android:exported="true" />
+        <activity android:name=".userProfile" />
         <activity android:name=".LoginPage" />
         <activity android:name=".RegistrationPage" />
         <activity android:name=".userLanding" />
-        <activity android:name=".HeavyMeals"></activity>
+        <activity android:name=".HeavyMeals" />
         <activity android:name=".FoodAndBeverages" />
-        <activity android:name=".ShowDetails"></activity>
-        <activity android:name=".DetailsForm"></activity>
-
+        <activity android:name=".ShowDetails" />
+        <activity android:name=".DetailsForm" />
         <activity
             android:name=".Services"
             android:exported="true" />
