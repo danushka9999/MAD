@@ -25,4 +25,7 @@ public class Services extends AppCompatActivity {
     public void detailsForm(View view){
         startActivity(new Intent(this, DetailsForm.class));
     }
+    public void gymandactivities(View view){
+        startActivity(new Intent(this, GymAndActivities.class));
+    }
 }
