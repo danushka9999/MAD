@@ -21,6 +21,8 @@ public class FoodAndBeverages extends AppCompatActivity implements View.OnClickL
         cardView_heavyMeals.setOnClickListener(this);
 
         cardView_snacks = findViewById(R.id.cv_snacks);
+        cardView_snacks.setOnClickListener(this);
+
         cardView_beverages = findViewById(R.id.cv_beverages);
     }
 
@@ -30,6 +32,8 @@ public class FoodAndBeverages extends AppCompatActivity implements View.OnClickL
             case R.id.cv_heavyMeals:
                 startActivity(new Intent(this,HeavyMeals.class));
                 break;
+            case R.id.cv_snacks:
+                startActivity(new Intent(this,Snacks.class));
         }
 
     }

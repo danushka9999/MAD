@@ -84,5 +84,18 @@
     <string name="tv_unitPrice">Unit Price:</string>
     <string name="btn_purchase">PURCHASE</string>
     <string name="hint_tot">Total Price</string>
-    <string name="tv_mealOrderTopic">Order Your Meal Here</string>
+    <string name="tv_mealOrderTopic">Order Your Food and Beverages Here</string>
+    <string name="btn_viewHeavyMealList">View List of Items</string>
+    <string-array name="heavyMealItems">
+        <item>Burgers</item>
+        <item>Submarine</item>
+        <item>Shawarma</item>
+        <item>Biriyani</item>
+    </string-array>
+    <string-array name="sanckItems">
+        <item>Cookies</item>
+        <item>Waffles</item>
+        <item>Pancakes</item>
+        <item>CupCakes</item>
+    </string-array>
 </resources>
