@@ -42,4 +42,5 @@
         android:layout_gravity="bottom"
         app:menu="@menu/bottom_navigation_menu" />
 
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

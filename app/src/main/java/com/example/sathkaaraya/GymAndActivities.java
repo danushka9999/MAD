@@ -31,7 +31,7 @@ public class GymAndActivities extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gym_and_activities);
         toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolbar.setTitle("Gym and Activities");
 
         viewPager = findViewById(R.id.view_pager);
         tabLayout = findViewById(R.id.tab_layout);
