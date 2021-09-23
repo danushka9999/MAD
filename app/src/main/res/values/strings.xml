@@ -76,7 +76,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="et_name">Name</string>
     <string name="et_startingDate">Starting Date</string>
-    <string name="btn_send">Book</string>
+    <string name="btn_send">Send</string>
     <string name="et_endingDate">Ending Date</string>
     <string name="et_NoOfAdults">Adults</string>
     <string name="et_NoOfChildren">Children</string>
@@ -87,4 +87,29 @@
     <string name="tv_mealOrderTopic">Order Your Meal Here</string>
     <string name="et_search">Where are you going?</string>
     <string name="tv_selectPackage">Select Package</string>
+    <string name="btn_viewHeavyMealList">View Orders</string>
+    <string-array name="heavyMealItems">
+        <item>Burgers</item>
+        <item>Submarine</item>
+        <item>Shawarma</item>
+        <item>Biriyani</item>
+    </string-array>
+    <string-array name="sanckItems">
+        <item>Cookies</item>
+        <item>Waffles</item>
+        <item>Pancakes</item>
+        <item>CupCakes</item>
+    </string-array>
+    <string-array name="beverageItems">
+        <item>MilkShakes</item>
+        <item>FruitDrinks</item>
+        <item>Softdrinks</item>
+        <item>Cocktails</item>
+    </string-array>
+    <string name="firstName">First Name :</string>
+    <string name="lastName">Last Name :</string>
+    <string name="email">Email:</string>
+    <string name="phoneNumber">Mobile :</string>
+    <string name="country">Country :</string>
+    <string name="totalBill">Total Bill :</string>
 </resources>

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +26,7 @@ public class DetailsForm extends AppCompatActivity {
 
 
         et_name = findViewById(R.id.et_name);
-        et_roomNo = findViewById(R.id.et_roomNo);
+        et_roomNo = findViewById(R.id.et_roomNo_sancks);
         et_startDate = findViewById(R.id.et_startDate);
         et_endingDate = findViewById(R.id.et_endingDate);
         et_NoOfAdults = findViewById(R.id.et_NoOfAdults);

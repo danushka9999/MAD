@@ -30,7 +30,7 @@ public class ShowDetails extends AppCompatActivity {
         setContentView(R.layout.activity_show_details);
 
         updateName = findViewById(R.id.ed_updateName);
-        updateRoomNo = findViewById(R.id.et_roomNo);
+        updateRoomNo = findViewById(R.id.et_roomNo_sancks);
         updateStartingDate = findViewById(R.id.et_startDate);
         updateEndingDate = findViewById(R.id.et_endingDate);
         updateNoOfAdults = findViewById(R.id.et_NoOfAdults);

@@ -4,7 +4,7 @@ public class Meals {
     private String roomNo;
     private String foodtype;
     private String quantity;
-    private String unitPrice;
+//    private String unitPrice;
 
     public Meals() {
     }
@@ -14,7 +14,7 @@ public class Meals {
         this.roomNo = roomNo;
         this.foodtype = foodtype;
         this.quantity = quantity;
-        this.unitPrice = unitPrice;
+//        this.unitPrice = unitPrice;
     }
 
     //Getters
@@ -30,9 +30,9 @@ public class Meals {
         return quantity;
     }
 
-    public String getUnitPrice() {
-        return unitPrice;
-    }
+//    public String getUnitPrice() {
+//        return unitPrice;
+//    }
 
     //Setters
     public void setRoomNo(String roomNo) {
@@ -47,7 +47,7 @@ public class Meals {
         this.quantity = quantity;
     }
 
-    public void setUnitPrice(String unitPrice) {
-        this.unitPrice = unitPrice;
-    }
+//    public void setUnitPrice(String unitPrice) {
+//        this.unitPrice = unitPrice;
+//    }
 }

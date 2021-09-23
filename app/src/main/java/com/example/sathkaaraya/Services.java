@@ -21,4 +21,8 @@ public class Services extends AppCompatActivity {
 
         startActivity(new Intent(this, whereTo.class));
     }
+
+    public void onClickFood(View view){
+        startActivity(new Intent(this,FoodAndBeverages.class));
+    }
 }
