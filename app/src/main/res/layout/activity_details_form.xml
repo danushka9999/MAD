@@ -9,17 +9,17 @@
     tools:context=".DetailsForm">
 
     <TextView
-        android:id="@+id/tv_enterDetails"
+        android:id="@+id/tv_selectPackage"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:textColor="#ffffff"
-        android:textSize="30sp"
-        android:textAlignment="center"
         android:hint="@string/tv_enterDetails"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
         android:textColorHint="#ffffff"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
         app:cardElevation="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_enterDetails"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selectPackage"
         tools:ignore="MissingConstraints">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -141,11 +141,11 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="60dp"
                 android:layout_marginEnd="32dp"
-                android:hint="@string/btn_send"
-                android:textSize="20sp"
-                android:textColorHint="@color/white"
                 android:backgroundTint="#FF4C29"
+                android:hint="@string/btn_send"
                 android:onClick="CreateData"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.398"
                 app:layout_constraintStart_toStartOf="parent"

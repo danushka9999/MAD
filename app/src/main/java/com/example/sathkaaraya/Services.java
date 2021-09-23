@@ -17,8 +17,9 @@ public class Services extends AppCompatActivity {
 
     }
 
-    public void detailsForm(View view){
-        startActivity(new Intent(this, DetailsForm.class));
+    public void WhereTo(View view){
+
+        startActivity(new Intent(this, whereTo.class));
     }
 
     public void onClickFood(View view){

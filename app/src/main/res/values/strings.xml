@@ -84,7 +84,9 @@
     <string name="tv_unitPrice">Unit Price:</string>
     <string name="btn_purchase">PURCHASE</string>
     <string name="hint_tot">Total Price</string>
-    <string name="tv_mealOrderTopic">Order Your Food and Beverages Here</string>
+    <string name="tv_mealOrderTopic">Order Your Meal Here</string>
+    <string name="et_search">Where are you going?</string>
+    <string name="tv_selectPackage">Select Package</string>
     <string name="btn_viewHeavyMealList">View Orders</string>
     <string-array name="heavyMealItems">
         <item>Burgers</item>

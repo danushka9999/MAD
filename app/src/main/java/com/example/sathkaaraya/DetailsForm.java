@@ -2,6 +2,7 @@ package com.example.sathkaaraya;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class DetailsForm extends AppCompatActivity {
 
-    EditText et_name, et_roomNo, et_startDate, et_endingDate, et_NoOfAdults ,et_NoOfChildren;
+    EditText et_name, et_roomNo, et_startDate, et_endingDate, et_NoOfAdults, et_NoOfChildren;
     Button btn_send;
     Form formObj;
     DatabaseReference dbRef;
@@ -35,8 +36,9 @@ public class DetailsForm extends AppCompatActivity {
         formObj = new Form();
 
     }
+
     //method to clear all user inputs
-    private void clearControls(){
+    private void clearControls() {
         et_name.setText("");
         et_roomNo.setText("");
         et_startDate.setText("");
@@ -45,41 +47,23 @@ public class DetailsForm extends AppCompatActivity {
         et_NoOfChildren.setText("");
     }
 
-    public void CreateData(View view){
+    public void CreateData(View view) {
         dbRef = FirebaseDatabase.getInstance().getReference().child("FormDetails");
-        try{
-//            if(TextUtils.isEmpty(et_name.getText().toString()))
-//                Toast.makeText(getApplicationContext(), "Please enter the name", Toast.LENGTH_SHORT).show();
-//            else if(TextUtils.isEmpty(et_roomNo.getText().toString()))
-//                Toast.makeText(getApplicationContext(), "Please enter the room number", Toast.LENGTH_SHORT).show();
-//            else if(TextUtils.isEmpty(et_startDate.getText().toString()))
-//                Toast.makeText(getApplicationContext(), "Please enter the starting date", Toast.LENGTH_SHORT).show();
-//            else if(TextUtils.isEmpty(et_endingDate.getText().toString()))
-//                Toast.makeText(getApplicationContext(), "Please enter the ending date", Toast.LENGTH_SHORT).show();
-//            else if(TextUtils.isEmpty(et_NoOfAdults.getText().toString()))
-//                Toast.makeText(getApplicationContext(), "Please enter the No Of Adults", Toast.LENGTH_SHORT).show();
-//            else if(TextUtils.isEmpty(et_NoOfChildren.getText().toString()))
-//                Toast.makeText(getApplicationContext(), "Please enter the No of Children", Toast.LENGTH_SHORT).show();
-//            else{
-                //take inputs from the user and assigning them to this instance (formObj) of the FormDetails..
-                formObj.setName(et_name.getText().toString().trim());
-                formObj.setRoomNo(Integer.parseInt(et_roomNo.getText().toString().trim()));
-                formObj.setStartingDate(et_startDate.getText().toString().trim());
-                formObj.setEndingDate(et_endingDate.getText().toString().trim());
-                formObj.setNoOfAdults(Integer.parseInt(et_NoOfAdults.getText().toString().trim()));
-                formObj.setNoOfChildren(Integer.parseInt(et_NoOfChildren.getText().toString().trim()));
 
-                //insert in to the database..
-                dbRef.push().setValue(formObj);
+        //take inputs from the user and assigning them to this instance (formObj) of the FormDetails..
+        formObj.setName(et_name.getText().toString().trim());
+        formObj.setRoomNo(Integer.parseInt(et_roomNo.getText().toString().trim()));
+        formObj.setStartingDate(et_startDate.getText().toString().trim());
+        formObj.setEndingDate(et_endingDate.getText().toString().trim());
+        formObj.setNoOfAdults(Integer.parseInt(et_NoOfAdults.getText().toString().trim()));
+        formObj.setNoOfChildren(Integer.parseInt(et_NoOfChildren.getText().toString().trim()));
 
-                //feedback to the user via a toast..
-                Toast.makeText(getApplicationContext(), "Data saved successfully", Toast.LENGTH_SHORT).show();
-                clearControls();
-//            }
+        //insert in to the database..
+        //dbRef.push().setValue(formObj);
+        dbRef.child("std1").setValue(formObj);
 
-        }catch (Exception e){
-            Toast.makeText(getApplicationContext(), "invalid room number" + e, Toast.LENGTH_SHORT).show();
 
-        }
+        startActivity(new Intent(this, ShowDetails.class));
     }
+
 }
