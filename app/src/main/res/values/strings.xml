@@ -87,4 +87,11 @@
     <string name="tv_mealOrderTopic">Order Your Meal Here</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gymtext">Make time for the gym  and avoid your discomfort</string>
+    <string name="gymbrowsing">Make time for the gym  and avoid your discomfort</string>
+    <string name="gymgym">Browse Gym Booking</string>
+    <string name="activitytext">Experience all our activities and Games</string>
+    <string name="browseactivities">BROWSE ACTIVITIES</string>
+    <string name="gymnew">BROWSE GYM BOOKING</string>
+    <string name="gymandactiviiesbtn">Gym and Activities</string>
 </resources>
