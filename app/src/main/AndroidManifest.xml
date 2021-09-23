@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SATHKAARAYA">
         <activity
+            android:name=".GymBooking"
+            android:exported="true" />
+        <activity
             android:name=".GymAndActivities"
             android:exported="true" />
         <activity android:name=".userProfile" />

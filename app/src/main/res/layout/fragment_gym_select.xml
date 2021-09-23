@@ -53,6 +53,7 @@
                     android:layout_width="221dp"
                     android:layout_height="53dp"
                     android:layout_centerHorizontal="true"
+                    android:onClick="gymbookselect"
                     android:text="@string/gymnew"
                     android:textAllCaps="false"
                     app:layout_constraintBottom_toBottomOf="parent"

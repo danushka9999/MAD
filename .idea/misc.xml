@@ -6,6 +6,7 @@
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/activity_details_form.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/activity_food_and_beverages.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/activity_gym_and_activities.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/activity_gym_booking.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/activity_heavy_meals.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/activity_login_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
@@ -16,6 +17,8 @@
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/activity_user_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/content_enterdetails.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/fragment_activity_select.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/fragment_book_gym.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/fragment_booked_gym.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/fragment_first.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/fragment_gym_select.xml" value="0.264" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/MAD/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
