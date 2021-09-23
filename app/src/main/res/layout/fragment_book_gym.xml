@@ -29,5 +29,25 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/date_picker_btn" />
+
+        <Button
+            android:id="@+id/time_picker_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a Time"
+            app:layout_constraintBottom_toTopOf="@+id/date_picker_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/selected_time"
+            android:layout_width="101dp"
+            android:layout_height="45dp"
+            android:text="Selected Time"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selected_date" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
