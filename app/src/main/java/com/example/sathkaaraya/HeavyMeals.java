@@ -2,6 +2,7 @@ package com.example.sathkaaraya;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     EditText editText_roomNo_heavyMeals,editText_quantity_heavyMeals;
-    Button btn_purchase_heavyMeals;
+    Button btn_purchase_heavyMeals,btn_vieworder;
     Spinner spinner;
 
     //Object decleration of meals
@@ -41,6 +42,15 @@ public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemS
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
         btn_purchase_heavyMeals = findViewById(R.id.btn_purchase_heavy);
+        btn_vieworder = findViewById(R.id.btn_list_heavyMeals);
+        btn_vieworder.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent =  new Intent(HeavyMeals.this,OrderList.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         meal = new Meals();
     }
