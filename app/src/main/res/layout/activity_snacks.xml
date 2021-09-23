@@ -22,13 +22,14 @@
         android:id="@+id/tv_qty"
         android:layout_width="83dp"
         android:layout_height="31dp"
-        android:layout_marginTop="620dp"
         android:text="@string/tv_qty"
         android:textColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.784" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -88,28 +89,30 @@
         android:id="@+id/et_qty_snacks"
         android:layout_width="104dp"
         android:layout_height="36dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="148dp"
         android:ems="10"
         android:hint="@string/hint_qty"
         android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.319"
+        app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toEndOf="@+id/tv_qty"
-        app:layout_constraintTop_toBottomOf="@+id/btn_list_sancks"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/foodItemSpinner2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/btn_purchase_heavy"
+        android:id="@+id/btn_purchase_snacks"
         android:layout_width="127dp"
         android:layout_height="45dp"
         android:onClick="purchase"
         android:text="@string/btn_purchase"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_qty_snacks" />
+        app:layout_constraintTop_toBottomOf="@+id/et_qty_snacks"
+        app:layout_constraintVertical_bias="0.514" />
 
     <ImageView
         android:id="@+id/img_foodorder"
@@ -137,13 +140,13 @@
 
     <Button
         android:id="@+id/btn_list_sancks"
-        android:layout_width="225dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="146dp"
+        android:layout_height="47dp"
         android:text="@string/btn_viewHeavyMealList"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_purchase_snacks"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foodItemSpinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_qty" />
 
     <Spinner
         android:id="@+id/foodItemSpinner2"

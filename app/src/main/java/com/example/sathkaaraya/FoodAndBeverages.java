@@ -34,6 +34,9 @@ public class FoodAndBeverages extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.cv_snacks:
                 startActivity(new Intent(this,Snacks.class));
+                break;
+            case R.id.cv_beverages:
+                startActivity(new Intent(this,Beverages.class));
         }
 
     }

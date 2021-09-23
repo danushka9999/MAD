@@ -85,7 +85,7 @@
     <string name="btn_purchase">PURCHASE</string>
     <string name="hint_tot">Total Price</string>
     <string name="tv_mealOrderTopic">Order Your Food and Beverages Here</string>
-    <string name="btn_viewHeavyMealList">View List of Items</string>
+    <string name="btn_viewHeavyMealList">View Orders</string>
     <string-array name="heavyMealItems">
         <item>Burgers</item>
         <item>Submarine</item>
@@ -97,5 +97,11 @@
         <item>Waffles</item>
         <item>Pancakes</item>
         <item>CupCakes</item>
+    </string-array>
+    <string-array name="beverageItems">
+        <item>MilkShakes</item>
+        <item>FruitDrinks</item>
+        <item>Softdrinks</item>
+        <item>Cocktails</item>
     </string-array>
 </resources>

@@ -16,8 +16,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
-    EditText editText_roomNo,editText_quantity,editText_unitPrice;
-    Button btn_purchase;
+    EditText editText_roomNo_heavyMeals,editText_quantity_heavyMeals;
+    Button btn_purchase_heavyMeals;
     Spinner spinner;
 
     //Object decleration of meals
@@ -31,8 +31,8 @@ public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemS
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_heavy_meals);
 
-        editText_roomNo = findViewById(R.id.et_roomNo_sancks);
-        editText_quantity = findViewById(R.id.et_qty_snacks);
+        editText_roomNo_heavyMeals = findViewById(R.id.et_roomNo_heavyMeals);
+        editText_quantity_heavyMeals = findViewById(R.id.et_qty_heavyMeals);
 
         //Setting the spinner array
         spinner = findViewById(R.id.foodItemSpinner2);
@@ -40,15 +40,15 @@ public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemS
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        btn_purchase = findViewById(R.id.btn_purchase_heavy);
+        btn_purchase_heavyMeals = findViewById(R.id.btn_purchase_heavy);
 
         meal = new Meals();
     }
 
     //Clear the fields of the entered data
     private void clearData(){
-        editText_roomNo.setText("");
-        editText_quantity.setText("");
+        editText_roomNo_heavyMeals.setText("");
+        editText_quantity_heavyMeals.setText("");
     }
 
     //Method to send the data to the database
@@ -56,19 +56,20 @@ public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemS
         db = FirebaseDatabase.getInstance().getReference().child("Meals");
 
         try{
-            if(TextUtils.isEmpty(editText_roomNo.getText().toString().trim())){
+            if(TextUtils.isEmpty(editText_roomNo_heavyMeals.getText().toString().trim())){
                 Toast.makeText(getApplicationContext(),"Enter the Room No",Toast.LENGTH_LONG).show();
             }else if(TextUtils.isEmpty(spinner.getSelectedItem().toString().trim())){
                 Toast.makeText(getApplicationContext(),"Enter the Food Item",Toast.LENGTH_LONG).show();
-            }else if(TextUtils.isEmpty(editText_quantity.getText().toString().trim())){
+            }else if(TextUtils.isEmpty(editText_quantity_heavyMeals.getText().toString().trim())){
                 Toast.makeText(getApplicationContext(),"Enter the Quantity",Toast.LENGTH_LONG).show();
             }else{
-                meal.setRoomNo(editText_roomNo.getText().toString().trim());
+                meal.setRoomNo(editText_roomNo_heavyMeals.getText().toString().trim());
                 meal.setFoodtype(spinner.getSelectedItem().toString().trim());
-                meal.setQuantity(editText_quantity.getText().toString().trim());
+                meal.setQuantity(editText_quantity_heavyMeals.getText().toString().trim());
 
 
-                db.push().setValue(meal);
+//                db.push().setValue(meal);
+                db.child("heavyMeal").setValue(meal);
                 Toast.makeText(getApplicationContext(),"Successfull",Toast.LENGTH_LONG).show();
                 clearData();
             }
