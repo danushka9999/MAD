@@ -104,4 +104,10 @@
         <item>Softdrinks</item>
         <item>Cocktails</item>
     </string-array>
+    <string name="firstName">First Name :</string>
+    <string name="lastName">Last Name :</string>
+    <string name="email">Email:</string>
+    <string name="phoneNumber">Mobile :</string>
+    <string name="country">Country :</string>
+    <string name="totalBill">Total Bill :</string>
 </resources>

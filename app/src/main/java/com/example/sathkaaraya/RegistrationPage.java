@@ -54,6 +54,7 @@ public class RegistrationPage extends AppCompatActivity {
 
     }
 
+
     public void Save(View view){
         try {
 
