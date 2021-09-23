@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#E6E6E6"
+    tools:context=".whereTo">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/beach1"
+        android:scaleType="fitXY" />
+
+    <EditText
+
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/custom_input"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/search"
+        android:drawablePadding="30dp"
+        android:ems="10"
+        android:hint="@string/et_search"
+
+        android:textColorHint="@color/black"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint="Explore near by places"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="460dp"
+        android:layout_marginEnd="100dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="100dp"
+        android:layout_marginTop="500dp"
+        android:onClick="selectPackage"
+        android:backgroundTint="@color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/hikkaduwa"
+            />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:hint="Hikkaduwa"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="128dp"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:hint="30 min drive"
+            android:textSize="20sp"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="30dp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="100dp"
+        android:layout_marginTop="590dp"
+        android:onClick="selectPackage"
+        android:backgroundTint="@color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/yala"
+            />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:hint="Yala"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="150dp"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:hint="45 min drive"
+            android:textSize="20sp"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="30dp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

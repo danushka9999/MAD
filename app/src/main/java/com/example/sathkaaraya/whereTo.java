@@ -1,24 +1,20 @@
 package com.example.sathkaaraya;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 
-public class Services extends AppCompatActivity {
+public class whereTo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_services);
-
+        setContentView(R.layout.activity_where_to);
     }
 
-    public void WhereTo(View view){
-
-        startActivity(new Intent(this, whereTo.class));
+    public void selectPackage(View view){
+        startActivity(new Intent(this, SelectPackage.class));
     }
 }

@@ -76,7 +76,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="et_name">Name</string>
     <string name="et_startingDate">Starting Date</string>
-    <string name="btn_send">Send</string>
+    <string name="btn_send">Book</string>
     <string name="et_endingDate">Ending Date</string>
     <string name="et_NoOfAdults">Adults</string>
     <string name="et_NoOfChildren">Children</string>
@@ -85,4 +85,6 @@
     <string name="btn_purchase">PURCHASE</string>
     <string name="hint_tot">Total Price</string>
     <string name="tv_mealOrderTopic">Order Your Meal Here</string>
+    <string name="et_search">Where are you going?</string>
+    <string name="tv_selectPackage">Select Package</string>
 </resources>
