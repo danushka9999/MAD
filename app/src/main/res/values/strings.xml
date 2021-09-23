@@ -85,4 +85,10 @@
     <string name="btn_purchase">PURCHASE</string>
     <string name="hint_tot">Total Price</string>
     <string name="tv_mealOrderTopic">Order Your Meal Here</string>
+    <string name="firstName">First Name :</string>
+    <string name="lastName">Last Name :</string>
+    <string name="email">Email:</string>
+    <string name="phoneNumber">Mobile :</string>
+    <string name="country">Country :</string>
+    <string name="totalBill">Total Bill :</string>
 </resources>
