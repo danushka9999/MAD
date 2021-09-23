@@ -16,7 +16,6 @@
         <activity android:name=".OrderList"></activity>
         <activity android:name=".Beverages" />
         <activity android:name=".Snacks" />
-        <activity android:name=".userProfile" />
         <activity android:name=".UpdateUser"></activity>
         <activity android:name=".LoginPage" />
         <activity android:name=".RegistrationPage" />
