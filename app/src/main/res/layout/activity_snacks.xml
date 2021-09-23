@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTintMode="screen"
-    tools:context=".HeavyMeals">
+    tools:context=".Snacks">
 
     <TextView
         android:id="@+id/tv_foodItem"
@@ -30,7 +29,7 @@
         app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.788" />
+        app:layout_constraintVertical_bias="0.784" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -53,7 +52,7 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="sans-serif"
                 android:gravity="center_vertical"
-                android:text="@string/tv_hvyMeal"
+                android:text="@string/tv_snack"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -73,7 +72,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_roomNo_heavyMeals"
+        android:id="@+id/et_roomNo_sancks"
         android:layout_width="214dp"
         android:layout_height="35dp"
         android:layout_marginTop="8dp"
@@ -87,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_roomNo" />
 
     <EditText
-        android:id="@+id/et_qty_heavyMeals"
+        android:id="@+id/et_qty_snacks"
         android:layout_width="104dp"
         android:layout_height="36dp"
         android:layout_marginBottom="148dp"
@@ -97,21 +96,23 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.296"
-        app:layout_constraintStart_toEndOf="@+id/tv_qty" />
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toEndOf="@+id/tv_qty"
+        app:layout_constraintTop_toBottomOf="@+id/foodItemSpinner2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/btn_purchase_heavy"
+        android:id="@+id/btn_purchase_snacks"
         android:layout_width="127dp"
         android:layout_height="45dp"
         android:onClick="purchase"
         android:text="@string/btn_purchase"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_qty_heavyMeals"
-        app:layout_constraintVertical_bias="0.533" />
+        app:layout_constraintTop_toBottomOf="@+id/et_qty_snacks"
+        app:layout_constraintVertical_bias="0.514" />
 
     <ImageView
         android:id="@+id/img_foodorder"
@@ -122,7 +123,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:layout_constraintVertical_bias="0.136"
-        app:srcCompat="@drawable/fooorder" />
+        app:srcCompat="@drawable/snack" />
 
     <TextView
         android:id="@+id/tv_mealOrder_topic"
@@ -138,17 +139,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_list_heavyMeals"
+        android:id="@+id/btn_list_sancks"
         android:layout_width="146dp"
         android:layout_height="47dp"
-        android:layout_marginEnd="40dp"
         android:text="@string/btn_viewHeavyMealList"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_purchase_heavy"
-        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintEnd_toStartOf="@+id/btn_purchase_snacks"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_qty"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_qty" />
 
     <Spinner
         android:id="@+id/foodItemSpinner2"
@@ -158,5 +156,6 @@
         app:layout_constraintHorizontal_bias="0.362"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_foodItem" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

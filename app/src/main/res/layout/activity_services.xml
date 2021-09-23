@@ -39,7 +39,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:onClick="detailsForm"
+        android:onClick="WhereTo"
         app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
@@ -82,11 +82,12 @@
         android:layout_width="360dp"
         android:layout_height="183dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:onClick="onClickFood"
         app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
@@ -135,7 +136,7 @@
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.261">
+        app:layout_constraintVertical_bias="0.4">
 
         <ImageView
             android:id="@+id/gymImage"
@@ -160,7 +161,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="200dp"
             android:shadowColor="@color/black"
-            android:text="@string/gymandactiviiesbtn"
+            android:text="@string/tv_btn_gym"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"

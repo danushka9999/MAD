@@ -9,13 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SATHKAARAYA">
+        <activity android:name=".Receipt"></activity>
+        <activity android:name=".SelectPackage" />
+        <activity android:name=".whereTo" />
+        <activity android:name=".userProfile" />
+        <activity android:name=".OrderList"></activity>
+        <activity android:name=".Beverages" />
+        <activity android:name=".Snacks" />
+        <activity android:name=".UpdateUser"></activity>
         <activity
             android:name=".GymBooking"
             android:exported="true" />
         <activity
             android:name=".GymAndActivities"
             android:exported="true" />
-        <activity android:name=".userProfile" />
         <activity android:name=".LoginPage" />
         <activity android:name=".RegistrationPage" />
         <activity android:name=".userLanding" />
