@@ -20,4 +20,8 @@ public class Services extends AppCompatActivity {
     public void detailsForm(View view){
         startActivity(new Intent(this, DetailsForm.class));
     }
+
+    public void onClickFood(View view){
+        startActivity(new Intent(this,FoodAndBeverages.class));
+    }
 }
