@@ -15,9 +15,7 @@ public class UpdateUser extends AppCompatActivity {
     EditText firstName;
     DatabaseReference reference;
     userProfile user=new userProfile();
-
     String userID= user.getuserId();
-
 
 
 
