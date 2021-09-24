@@ -1,6 +1,8 @@
 package com.example.sathkaaraya;
 
+import android.app.Activity;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -155,6 +157,7 @@ public class BookGym extends Fragment {
                         dbRef.child(getuserId()).push().setValue(book);
                         Toast.makeText(getActivity(),"Session Booked",Toast.LENGTH_LONG).show();
                         clearControls();
+                        restartActivity(getActivity());
                     }
 
                 }catch(NumberFormatException e){
@@ -173,6 +176,14 @@ public class BookGym extends Fragment {
         mSelectedDateText.setText("Selected Date");
         dateselected = "";
         timeselected = "";
+    }
+    public static void restartActivity(Activity act){
+
+        Intent intent=new Intent();
+        intent.setClass(act, act.getClass());
+        act.startActivity(intent);
+        act.finish();
+
     }
 
 
