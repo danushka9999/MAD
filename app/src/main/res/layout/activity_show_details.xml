@@ -24,7 +24,7 @@
         />
 
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/tv_updateuser"
         android:layout_width="93dp"
         android:layout_height="41dp"
         android:layout_marginStart="32dp"
@@ -41,10 +41,10 @@
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_updateuser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.659"
-        app:layout_constraintStart_toEndOf="@+id/tv_name" />
+        app:layout_constraintStart_toEndOf="@+id/tv_updateuser" />
 
     <TextView
         android:id="@+id/tv_roomNo"
@@ -55,7 +55,7 @@
         android:hint="Room NO"
         android:textColorHint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_updateuser" />
 
     <EditText
         android:id="@+id/et_updateRoomNo"
