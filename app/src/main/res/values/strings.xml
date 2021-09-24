@@ -122,4 +122,5 @@
     <string name="country">Country :</string>
     <string name="totalBill">Total Bill :</string>
     <string name="description1">Select a date and a time to book  a slot</string>
+    <string name="gymbooking">Gym Booking</string>
 </resources>
