@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SATHKAARAYA">
+        <activity
+            android:name=".ActivityBokking"
+            android:exported="true" />
+        <activity android:name=".Receipt" />
         <activity android:name=".landingReceipt"></activity>
         <activity android:name=".ReceiptPage" />
-        <activity android:name=".Receipt" />
         <activity android:name=".SelectPackage" />
         <activity android:name=".whereTo" />
         <activity android:name=".userProfile" />

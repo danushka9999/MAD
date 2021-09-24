@@ -9,10 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -20,43 +17,41 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GymAndActivities extends AppCompatActivity {
+public class ActivityBokking extends AppCompatActivity {
+
     BottomNavigationView bottomNavigationView;
     private Toolbar toolbar;
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
-    private GymSelect gymSelect;
-    private ActivitySelect activityselect;
+    private BookActivity bookactivity;
+    private BookedActivity bookedactivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gym_and_activities);
+        setContentView(R.layout.activity_bokking);
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Gym Booking");
+        toolbar = findViewById(R.id.toolbar11);
+        toolbar.setTitle("Activity Booking");
 
-        viewPager = findViewById(R.id.view_pager);
-        tabLayout = findViewById(R.id.tab_layout);
+        viewPager = findViewById(R.id.view_pager1);
+        tabLayout = findViewById(R.id.tab_layout1);
 
-        gymSelect = new GymSelect();
-        //activityselect = new ActivitySelect();
+        bookactivity = new BookActivity();
+        bookedactivity = new BookedActivity();
 
         tabLayout.setupWithViewPager(viewPager);
 
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), 0);
-        viewPagerAdapter.addFragment(gymSelect, "Gym");
-        //viewPagerAdapter.addFragment(activityselect, "Activities");
+        ActivityBokking.ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), 0);
+        viewPagerAdapter.addFragment(bookactivity, "Browse");
+        viewPagerAdapter.addFragment(bookedactivity, "My Activities");
         viewPager.setAdapter(viewPagerAdapter);
-
-
-
     }
 
     private class ViewPagerAdapter extends FragmentPagerAdapter {
-
         private List<Fragment> fragments = new ArrayList<>();
         private List<String> fragmentTitle = new ArrayList<>();
 
@@ -86,5 +81,4 @@ public class GymAndActivities extends AppCompatActivity {
             return fragmentTitle.get(position);
         }
     }
-
 }
