@@ -19,9 +19,16 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="MyTimePickerDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">
-        <item name="android:textColor">@color/black</item>
-        <item name="colorAccent">@color/black</item>
+    <style name="ThemeOverlay.App.MaterialCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <!-- just override the colors used in the default style -->
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/orange</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/orange</item>
+        <item name="colorAccent">@color/orange</item>
+        <item name="colorOnPrimary">@color/orange</item>
     </style>
 
     <style name="Theme.SATHKAARAYA.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
