@@ -126,4 +126,5 @@
     <string name="phoneNumber">Mobile :</string>
     <string name="country">Country :</string>
     <string name="totalBill">Total Bill :</string>
+    <string name="tv_orders">Orders</string>
 </resources>

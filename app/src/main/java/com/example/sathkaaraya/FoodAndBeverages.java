@@ -7,10 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class FoodAndBeverages extends AppCompatActivity implements View.OnClickListener {
     CardView cardView_heavyMeals;
     CardView cardView_snacks;
     CardView cardView_beverages;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,9 @@ public class FoodAndBeverages extends AppCompatActivity implements View.OnClickL
         cardView_snacks.setOnClickListener(this);
 
         cardView_beverages = findViewById(R.id.cv_beverages);
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
     }
 
     @Override
