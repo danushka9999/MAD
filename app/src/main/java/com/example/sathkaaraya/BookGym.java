@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.google.android.material.datepicker.CalendarConstraints;
 import com.google.android.material.datepicker.DateValidatorPointForward;
@@ -65,7 +66,7 @@ public class BookGym extends Fragment {
         calendar.set(Calendar.MONTH, Calendar.DECEMBER);
         long december = calendar.getTimeInMillis();
 
-        //CalendarConstraints
+        //CalendarConstraints(Validation)
         CalendarConstraints.Builder constraintBuilder = new CalendarConstraints.Builder();
         constraintBuilder.setValidator(DateValidatorPointForward.now());
         //MaterialDatePicker
@@ -73,7 +74,7 @@ public class BookGym extends Fragment {
         builder.setTitleText("SELECT A DATE FOR WORKOUT");
         builder.setSelection(today);
         builder.setCalendarConstraints(constraintBuilder.build());
-        final MaterialDatePicker materialDatePicker = builder.build();
+        final MaterialDatePicker materialDatePicker = builder.setTheme(R.style.ThemeOverlay_App_MaterialCalendar).build();
 
         mDatePickerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,16 +97,23 @@ public class BookGym extends Fragment {
                 Calendar calendar=Calendar.getInstance();
                 int hours=calendar.get(Calendar.HOUR_OF_DAY);
                 int mins=calendar.get(Calendar.MINUTE);
-                TimePickerDialog timePickerDialog= new TimePickerDialog(getActivity(), R.style.Theme_AppCompat_Light_Dialog, new TimePickerDialog.OnTimeSetListener(){
+                TimePickerDialog timePickerDialog= new TimePickerDialog(getActivity(), R.style.DialogTheme, new TimePickerDialog.OnTimeSetListener(){
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        Calendar currenttime = Calendar.getInstance();
                         Calendar c=Calendar.getInstance();
                         c.set(Calendar.HOUR_OF_DAY,hourOfDay);
                         c.set(Calendar.MINUTE,minute);
                         c.setTimeZone(TimeZone.getDefault());
                         SimpleDateFormat format= new SimpleDateFormat("k:mm a");
                         String time = format.format(c.getTime());
-                        mSelectedTimeText.setText("Selected Time : " + time);
+                        //Time Validation
+                        if(c.getTimeInMillis() < currenttime.getTimeInMillis()){
+                            Toast.makeText(getActivity(),"Please choose a time past current time",Toast.LENGTH_SHORT).show();
+                        }else{
+                            mSelectedTimeText.setText("Selected Time : " + time);
+                        }
+
                     }
                 },hours ,mins,false);
                 timePickerDialog.show();
