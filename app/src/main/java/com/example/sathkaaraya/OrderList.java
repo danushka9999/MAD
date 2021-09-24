@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,16 +18,22 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
+import static com.example.sathkaaraya.userProfile.getuserId;
+
 public class OrderList extends AppCompatActivity {
     RecyclerView recyclerView;
     DatabaseReference dbRef;
     MyAdapter myAdapter;
     ArrayList<Meals> list;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_list);
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
 
         recyclerView = findViewById(R.id.orderList);
         dbRef = FirebaseDatabase.getInstance().getReference("Meals");

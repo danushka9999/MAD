@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -20,6 +21,7 @@ public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemS
     EditText editText_roomNo_heavyMeals,editText_quantity_heavyMeals;
     Button btn_purchase_heavyMeals,btn_vieworder;
     Spinner spinner;
+    BottomNavigationView bottomNavigationView;
 
     //Object decleration of meals
     Meals meal;
@@ -34,6 +36,8 @@ public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemS
 
         editText_roomNo_heavyMeals = findViewById(R.id.et_roomNo_heavyMeals);
         editText_quantity_heavyMeals = findViewById(R.id.et_qty_heavyMeals);
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
 
         //Setting the spinner array
         spinner = findViewById(R.id.foodItemSpinner2);

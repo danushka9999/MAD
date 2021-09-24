@@ -2,6 +2,7 @@ package com.example.sathkaaraya;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -12,13 +13,15 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Snacks extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     EditText editText_roomNo_snacks,editText_quantity_snacks;
     Spinner spinner2;
-    Button btn_purchaseSnack;
+    Button btn_purchaseSnack,btn_view_order_snack;
+    BottomNavigationView bottomNavigationView;
 
     //Databse reference
     DatabaseReference db;
@@ -33,6 +36,8 @@ public class Snacks extends AppCompatActivity implements AdapterView.OnItemSelec
 
         editText_roomNo_snacks = findViewById(R.id.et_roomNo_sancks);
         editText_quantity_snacks = findViewById(R.id.et_qty_snacks);
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
         //Setting the spinner array
         spinner2 = findViewById(R.id.foodItemSpinner2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.sanckItems, android.R.layout.simple_spinner_item);
@@ -40,6 +45,15 @@ public class Snacks extends AppCompatActivity implements AdapterView.OnItemSelec
         spinner2.setAdapter(adapter);
         spinner2.setOnItemSelectedListener(this);
         btn_purchaseSnack = findViewById(R.id.btn_purchase_snacks);
+        btn_view_order_snack = findViewById(R.id.btn_list_sancks);
+        btn_view_order_snack.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent =  new Intent(Snacks.this,OrderList.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         snack = new Meals();
 

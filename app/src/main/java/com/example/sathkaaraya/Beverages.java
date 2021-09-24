@@ -2,6 +2,7 @@ package com.example.sathkaaraya;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -12,13 +13,15 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Beverages extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     EditText editText_roomNo_beverages,editText_quantity_beverages;
     Spinner spinner3;
-    Button btn_purchase_beverages;
+    Button btn_purchase_beverages,btn_view_order_bvg;
+    BottomNavigationView bottomNavigationView;
 
     //Databse reference
     DatabaseReference db;
@@ -33,6 +36,8 @@ public class Beverages extends AppCompatActivity implements AdapterView.OnItemSe
 
         editText_roomNo_beverages = findViewById(R.id.et_roomNo_beverages);
         editText_quantity_beverages = findViewById(R.id.et_qty_beverages);
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
         //Setting the spinner array
         spinner3 = findViewById(R.id.foodItemSpinner3);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.beverageItems, android.R.layout.simple_spinner_item);
@@ -40,6 +45,15 @@ public class Beverages extends AppCompatActivity implements AdapterView.OnItemSe
         spinner3.setAdapter(adapter);
         spinner3.setOnItemSelectedListener(this);
         btn_purchase_beverages = findViewById(R.id.btn_purchase_beverages);
+        btn_view_order_bvg = findViewById(R.id.btn_list_beverages);
+        btn_view_order_bvg.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent =  new Intent(Beverages.this,OrderList.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         beverage = new Meals();
     }
