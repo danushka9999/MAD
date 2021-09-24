@@ -152,7 +152,7 @@ public class BookGym extends Fragment {
                         book.setDate(dateselected.trim());
                         book.setTime(timeselected.trim());
 
-                        dbRef.child(getuserId()).setValue(book);
+                        dbRef.child(getuserId()).push().setValue(book);
                         Toast.makeText(getActivity(),"Session Booked",Toast.LENGTH_LONG).show();
                         clearControls();
                     }
