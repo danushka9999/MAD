@@ -36,7 +36,7 @@ public class OrderList extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
 
         recyclerView = findViewById(R.id.orderList);
-        dbRef = FirebaseDatabase.getInstance().getReference("Meals");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Meals").child(getuserId());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

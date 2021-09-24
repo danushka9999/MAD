@@ -17,6 +17,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import static com.example.sathkaaraya.userProfile.getuserId;
+
 public class Beverages extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     EditText editText_roomNo_beverages,editText_quantity_beverages;
     Spinner spinner3;
@@ -80,8 +82,8 @@ public class Beverages extends AppCompatActivity implements AdapterView.OnItemSe
                 beverage.setQuantity(editText_quantity_beverages.getText().toString().trim());
 
 
-//              db.push().setValue(beverage);
-                db.child("bvg").setValue(beverage);
+              db.child(getuserId()).push().setValue(beverage);
+//                db.child("bvg").setValue(beverage);
                 Toast.makeText(getApplicationContext(),"Successfull",Toast.LENGTH_LONG).show();
                 clearData();
             }
