@@ -34,4 +34,5 @@
     <style name="Theme.SATHKAARAYA.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.SATHKAARAYA.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

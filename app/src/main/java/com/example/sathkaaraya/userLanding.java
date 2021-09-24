@@ -27,4 +27,7 @@ public class userLanding extends AppCompatActivity {
     public void tempUserProfile(View view){
         startActivity(new Intent(userLanding.this,userProfile.class));
     }
+    public void receipt(View view){
+        startActivity(new Intent(userLanding.this,landingReceipt.class));
+    }
 }

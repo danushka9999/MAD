@@ -28,7 +28,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
         android:layout_width="match_parent"
-        android:layout_height="625dp"
+        android:layout_height="562dp"
         android:layout_margin="1dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="60dp"
@@ -42,7 +42,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
             <EditText
                 android:id="@+id/et_name"
@@ -60,7 +61,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/et_roomNo_sancks"
+                android:id="@+id/et_roomNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="44dp"
@@ -87,7 +88,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_roomNo_sancks" />
+                app:layout_constraintTop_toBottomOf="@+id/et_roomNo" />
 
             <EditText
                 android:id="@+id/et_endingDate"
@@ -136,8 +137,8 @@
 
             <Button
                 android:id="@+id/btn_send"
-                android:layout_width="172dp"
-                android:layout_height="55dp"
+                android:layout_width="129dp"
+                android:layout_height="56dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="60dp"
                 android:layout_marginEnd="32dp"
@@ -147,11 +148,44 @@
                 android:textColorHint="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_NoOfChildren" />
 
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="127dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="32dp"
+                android:backgroundTint="#FF4C29"
+                android:hint="update"
+                android:onClick="Update"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_NoOfChildren" />
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/icons_color"
+        app:itemRippleColor="@color/orange"
+        app:itemTextColor="@color/icons_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

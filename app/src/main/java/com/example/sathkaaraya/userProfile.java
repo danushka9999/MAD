@@ -1,16 +1,12 @@
 package com.example.sathkaaraya;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +20,6 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.io.ByteArrayOutputStream;
 
 public class userProfile extends AppCompatActivity {
 
@@ -50,10 +44,10 @@ public class userProfile extends AppCompatActivity {
         reference= FirebaseDatabase.getInstance().getReference("registrationDetails");
         loggedInUserID=logedInUser.getUid();
 
-        final TextView tv_name=findViewById(R.id.tv_name);
+        final TextView tv_name=findViewById(R.id.tv_updateuser);
         final TextView tv_email=findViewById(R.id.tv_email);
         final TextView tv_phoneNumber=findViewById(R.id.tv_phonenumber);
-        final TextView tv_country=findViewById(R.id.tv_countryName);
+        final TextView tv_country=findViewById(R.id.tv_updateCountry);
 //        profileImage=findViewById(R.id.iv_image);
 
         reference.child(loggedInUserID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -83,13 +77,16 @@ public class userProfile extends AppCompatActivity {
 
     }
 
+    public void editUser (View view){
+        startActivity(new Intent(this,UpdateUser.class));
+    }
+
     public static String getuserId(){
         String userID=FirebaseAuth.getInstance().getCurrentUser().getUid();
         return  userID;
     }
-public void editUser(View view){
-        startActivity(new Intent(this,UpdateUser.class));
-}
+
+
 
 //    public void handleImageClick(View view) {
 //

@@ -13,13 +13,17 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import static com.example.sathkaaraya.userProfile.getuserId;
 
 public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     EditText editText_roomNo_heavyMeals,editText_quantity_heavyMeals;
     Button btn_purchase_heavyMeals,btn_vieworder;
     Spinner spinner;
+    BottomNavigationView bottomNavigationView;
 
     //Object decleration of meals
     Meals meal;
@@ -34,6 +38,8 @@ public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemS
 
         editText_roomNo_heavyMeals = findViewById(R.id.et_roomNo_heavyMeals);
         editText_quantity_heavyMeals = findViewById(R.id.et_qty_heavyMeals);
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
 
         //Setting the spinner array
         spinner = findViewById(R.id.foodItemSpinner2);
@@ -77,9 +83,8 @@ public class HeavyMeals extends AppCompatActivity implements AdapterView.OnItemS
                 meal.setFoodtype(spinner.getSelectedItem().toString().trim());
                 meal.setQuantity(editText_quantity_heavyMeals.getText().toString().trim());
 
-
-//                db.push().setValue(meal);
-                db.child("heavyMeal").setValue(meal);
+                db.child(getuserId()).push().setValue(meal);
+//                db.child("heavyMeal").setValue(meal);
                 Toast.makeText(getApplicationContext(),"Successfull",Toast.LENGTH_LONG).show();
                 clearData();
             }
