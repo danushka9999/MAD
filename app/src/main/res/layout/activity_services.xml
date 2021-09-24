@@ -29,6 +29,7 @@
         app:itemTextColor="@color/icons_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
 
@@ -161,7 +162,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="200dp"
             android:shadowColor="@color/black"
-            android:text="@string/tv_btn_gym"
+            android:text="@string/gymbooking"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
