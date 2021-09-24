@@ -19,9 +19,6 @@ public class UpdateUser extends AppCompatActivity {
     String userID= user.getuserId();
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

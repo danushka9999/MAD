@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 public class userProfile extends AppCompatActivity {
 
 
-     int TAKE_IMAGE_CODE =10001 ;
+    int TAKE_IMAGE_CODE =10001 ;
     ImageView profileImage;
     FirebaseFirestore fStore;
     private FirebaseUser logedInUser;

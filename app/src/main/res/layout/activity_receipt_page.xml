@@ -18,6 +18,34 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:minHeight="?attr/actionBarSize">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="Receipts"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card4"
             android:layout_width="match_parent"
@@ -52,6 +80,7 @@
                         android:textAppearance="?attr/textAppearanceHeadline6" />
 
                     <TextView
+                        android:id="@+id/tv_foodPackage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -60,12 +89,18 @@
                         android:textColor="?android:attr/textColorSecondary" />
 
                     <TextView
+                        android:id="@+id/tv_Foodprice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="Total Price:"
                         android:textAppearance="?attr/textAppearanceBody2"
                         android:textColor="?android:attr/textColorSecondary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
 
                 </LinearLayout>
 
@@ -128,6 +163,7 @@
                         android:textAppearance="?attr/textAppearanceHeadline6" />
 
                     <TextView
+                        android:id="@+id/tv_GymPackage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -136,6 +172,7 @@
                         android:textColor="?android:attr/textColorSecondary" />
 
                     <TextView
+                        android:id="@+id/tv_GymPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -204,6 +241,7 @@
                         android:textAppearance="?attr/textAppearanceHeadline6" />
 
                     <TextView
+                        android:id="@+id/tv_TravelPackage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -212,6 +250,7 @@
                         android:textColor="?android:attr/textColorSecondary" />
 
                     <TextView
+                        android:id="@+id/tv_travelPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
