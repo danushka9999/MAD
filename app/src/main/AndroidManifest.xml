@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SATHKAARAYA">
-        <activity android:name=".Receipt"></activity>
+        <activity
+            android:name=".ActivityBokking"
+            android:exported="true" />
+        <activity android:name=".Receipt" />
         <activity android:name=".SelectPackage" />
         <activity android:name=".whereTo" />
         <activity android:name=".userProfile" />
-        <activity android:name=".OrderList"></activity>
+        <activity android:name=".OrderList" />
         <activity android:name=".Beverages" />
         <activity android:name=".Snacks" />
-        <activity android:name=".UpdateUser"></activity>
+        <activity android:name=".UpdateUser" />
         <activity
             android:name=".GymBooking"
             android:exported="true" />
