@@ -1,5 +1,7 @@
 package com.example.sathkaaraya;
 
+import com.google.firebase.database.Exclude;
+
 public class Form {
     private String name;
     private Integer roomNo;
@@ -7,8 +9,25 @@ public class Form {
     private String endingDate;
     private Integer noOfAdults;
     private Integer noOfChildren;
+//    private String userId;
+
+
+//    @Exclude
+//    public String getUserId() {
+//        return userId;
+//    }
+//
+//    @Exclude
+//    public void setUserId(String userId) {
+//        this.userId = userId;
+//    }
 
     public Form() {
+    }
+
+    public Form (String name, Integer roomNo){
+        this.name = name;
+        this.roomNo = roomNo;
     }
 
     public String getName() {

@@ -31,7 +31,7 @@ public class Snacks extends AppCompatActivity implements AdapterView.OnItemSelec
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_snacks);
 
-        editText_roomNo_snacks = findViewById(R.id.et_roomNo_sancks);
+        editText_roomNo_snacks = findViewById(R.id.et_roomNo);
         editText_quantity_snacks = findViewById(R.id.et_qty_snacks);
         //Setting the spinner array
         spinner2 = findViewById(R.id.foodItemSpinner2);
