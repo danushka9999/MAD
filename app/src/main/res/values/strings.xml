@@ -25,6 +25,11 @@
         <item>+12</item>
         <item>+01</item>
     </string-array>
+    <string-array name="packages">
+        <item>Bronze</item>
+        <item>Gold</item>
+        <item>Platinum</item>
+    </string-array>
     <string name="tv_country">Country</string>
     <string name="tv_confirmPass">Confirm Password</string>
     <string name="tv_passRestrictions">*password should be 8-20 characters!\n*password should have a lower case letter!
