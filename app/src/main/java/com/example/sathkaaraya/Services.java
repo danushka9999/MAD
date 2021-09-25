@@ -36,7 +36,7 @@ public class Services extends AppCompatActivity{
                     case R.id.dashboardBN:
                         return true;
                     case R.id.receiptBN:
-                        startActivity(new Intent(getApplicationContext(), ReceiptPage.class));
+                        startActivity(new Intent(getApplicationContext(), landingReceipt.class));
                         overridePendingTransition(0,0);
                         return true;
 
