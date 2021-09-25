@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/register_background"
     android:onClick="signIn"
     tools:context=".LoginPage">
 
@@ -98,7 +99,7 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/back"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:onClick="signIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.34"
