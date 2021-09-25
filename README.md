@@ -71,6 +71,7 @@ For a customer who had been registered already he/she can log in to the app by p
 </p><p>
 A customer who is using this app can order any food according to their wish. Only thing he must do is to click on a button and place the order using a form. Then the request is handled by the system and passed on to the relevant admin. Also, a customer can reserve services provided by the hotel gymnasium. Also, the customer can book the gym time slots that is needed by the guests using the Gym and activities which is also connected to this services app. As one of the other services provided by this app, we can mention the Travelling service. In this scenario a customer can book a certain travel package according to their desire in the period that they are boarded in. Customer is asked for his/her requirements via a form and the rest is handled using the system. Finally, a customer can get the total amount that needs to be paid in his/her account. So, these are some of the services provided by the “SATHKAARAYA” guest services app to a customer.
 </p>
+
 ### Built With
 
 This section shows the list of major technologies that we have used to  built our project . 
