@@ -42,13 +42,13 @@ public class GymAndActivities extends AppCompatActivity {
         tabLayout = findViewById(R.id.tab_layout);
 
         gymSelect = new GymSelect();
-        //activityselect = new ActivitySelect();
+        activityselect = new ActivitySelect();
 
         tabLayout.setupWithViewPager(viewPager);
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), 0);
         viewPagerAdapter.addFragment(gymSelect, "Gym");
-        //viewPagerAdapter.addFragment(activityselect, "Activities");
+        viewPagerAdapter.addFragment(activityselect, "Activities");
         viewPager.setAdapter(viewPagerAdapter);
 
 
