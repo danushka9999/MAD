@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,6 +16,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -24,7 +27,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class RegistrationPage extends AppCompatActivity {
    Button save;
-   EditText firstName,lastName,email,phoneNumber,password;
+   EditText firstName,lastName,email,phoneNumber,password,confPass;
    Spinner country,phoneCode;
    registrationDetails register;
    DatabaseReference dbref;
@@ -86,34 +89,57 @@ public class RegistrationPage extends AppCompatActivity {
            String PhoneNumber=(phoneNumber.getText().toString().trim());
            String Password=(password.getText().toString().trim());
 
+           if(FirstName.isEmpty()){
+               firstName.setError("first name is required");
+               firstName.requestFocus();
+               return;
+
+           }
+           else if(Email.isEmpty()){
+               email.setError("Email is Required");
+               email.requestFocus();
+               return;
+           }
+           else if (Password.isEmpty()){
+               password.setError("Password is Required");
+               password.requestFocus();
+               return;
+           }
+           else if(Password.length()<8){
+               password.setError("Password should contain more than 7 characters");
+               password.requestFocus();
+               return;
+           }
+
+           else {
+
 //            register.setEmail(email.getText().toString().trim());
 //            register.setPassword(password.getText().toString().trim());
 //
 //            String authEmail=register.getEmail();
 //            String authPassword=register.getPassword();
-            mAuth.createUserWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            registrationDetails register=new registrationDetails(FirstName,LastName,Email,Country,PhoneCode,PhoneNumber,Password);
-                            FirebaseDatabase.getInstance().getReference("registrationDetails")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(register).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull @NotNull Task<Void> task) {
-                                    if(task.isSuccessful()){
-                                        Toast.makeText(getApplicationContext(),"data sent to database successfully",Toast.LENGTH_LONG).show();
-                                    }
-                                    else{
-                                        Toast.makeText(getApplicationContext(),"error in sending data",Toast.LENGTH_LONG).show();
-                                    }
-                                }
-                            });
-                        }else {
-                            Toast.makeText(getApplicationContext(),"error in sending data",Toast.LENGTH_LONG).show();
-                        }
-                }
-            });
-
+               mAuth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                   @Override
+                   public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
+                       if (task.isSuccessful()) {
+                           registrationDetails register = new registrationDetails(FirstName, LastName, Email, Country, PhoneCode, PhoneNumber, Password);
+                           FirebaseDatabase.getInstance().getReference("registrationDetails")
+                                   .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(register).addOnCompleteListener(new OnCompleteListener<Void>() {
+                               @Override
+                               public void onComplete(@NonNull @NotNull Task<Void> task) {
+                                   if (task.isSuccessful()) {
+                                       Toast.makeText(getApplicationContext(), "data sent to database successfully", Toast.LENGTH_LONG).show();
+                                   } else {
+                                       Toast.makeText(getApplicationContext(), "error in sending data", Toast.LENGTH_LONG).show();
+                                   }
+                               }
+                           });
+                       } else {
+                           Toast.makeText(getApplicationContext(), "error in sending data", Toast.LENGTH_LONG).show();
+                       }
+                   }
+               });
+           }
 
         }catch(Exception e){
             Toast.makeText(getApplicationContext(),"error"+e,Toast.LENGTH_LONG).show();

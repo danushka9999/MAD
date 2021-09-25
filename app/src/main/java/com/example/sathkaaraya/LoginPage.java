@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -55,10 +56,13 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-
+                    Snackbar snackbar=Snackbar.make(sign,"Login Success!", Snackbar.LENGTH_LONG);
+                    snackbar.show();
                     startActivity(new Intent(LoginPage.this,Services.class));
                 }else{
-                    Toast.makeText(getApplicationContext(),"error in sign in",Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getApplicationContext(),"error in sign in",Toast.LENGTH_LONG).show();
+                    Snackbar snackbar=Snackbar.make(sign,"Wrong Email or Password! try again", Snackbar.LENGTH_LONG);
+                    snackbar.show();
                 }
             }
         });
