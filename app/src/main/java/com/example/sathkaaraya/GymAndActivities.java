@@ -55,15 +55,19 @@ public class GymAndActivities extends AppCompatActivity {
 
     }
 
+    //Fragment Implementation in gym and activity interface
     private class ViewPagerAdapter extends FragmentPagerAdapter {
 
+        //Array of fragment implentation
         private List<Fragment> fragments = new ArrayList<>();
         private List<String> fragmentTitle = new ArrayList<>();
 
+        //View pager implementation
         public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
             super(fm, behavior);
         }
 
+        //fragment adding
         public void addFragment(Fragment fragment, String title) {
             fragments.add(fragment);
             fragmentTitle.add(title);
@@ -71,17 +75,20 @@ public class GymAndActivities extends AppCompatActivity {
 
         @NonNull
         @Override
+        //fragment getting method
         public Fragment getItem(int position) {
             return fragments.get(position);
         }
 
         @Override
+        //fragment count method
         public int getCount() {
             return fragments.size();
         }
 
         @Nullable
         @Override
+        //fragment page title method
         public CharSequence getPageTitle(int position) {
             return fragmentTitle.get(position);
         }
