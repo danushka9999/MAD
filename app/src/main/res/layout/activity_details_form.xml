@@ -90,6 +90,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_roomNo" />
 
+
             <EditText
                 android:id="@+id/et_endingDate"
                 android:layout_width="wrap_content"
@@ -136,23 +137,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/et_NoOfAdults" />
 
             <Button
-                android:id="@+id/btn_send"
-                android:layout_width="129dp"
-                android:layout_height="56dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="32dp"
-                android:backgroundTint="#FF4C29"
-                android:hint="@string/btn_send"
-                android:onClick="CreateData"
-                android:textColorHint="@color/white"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_NoOfChildren" />
-
-            <Button
                 android:id="@+id/btn_update"
                 android:layout_width="127dp"
                 android:layout_height="51dp"
@@ -165,10 +149,26 @@
                 android:textColorHint="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.055"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_NoOfChildren" />
 
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="127dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="32dp"
+                android:backgroundTint="#FF4C29"
+                android:hint="@string/btn_send"
+                android:onClick="CreateData"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_NoOfChildren" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
