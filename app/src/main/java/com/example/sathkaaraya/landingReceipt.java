@@ -26,10 +26,15 @@ public class landingReceipt extends AppCompatActivity {
                 android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.packages));
         packageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         countrySpinner.setAdapter(packageAdapter);
+//    public int getBill(int bill){
+//        showBill=bill;
+//        return showBill;
+//    };
 
 
 
     }
+
     public String getPackage(String name){
      if(name.equals("Bronze")){
          return "bronze";
@@ -40,14 +45,7 @@ public class landingReceipt extends AppCompatActivity {
      else{
          return "premium";
      }
-
     }
-
-    public int getBill(int bill){
-        showBill=bill;
-        return showBill;
-    };
-
 
 
     public void getReceipts(View view){

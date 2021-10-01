@@ -9,6 +9,7 @@ public class registrationDetails {
     private String phoneCode;
     private String phoneNumber;
     private String password;
+    private String Date;
 
 
 
@@ -16,7 +17,7 @@ public class registrationDetails {
     }
 
 
-    public registrationDetails(String firstname, String lastName, String email, String country,String phoneCode, String phoneNumber, String password) {
+    public registrationDetails(String firstname, String lastName, String email, String country,String phoneCode, String phoneNumber, String password, String Date) {
         this.firstname = firstname;
         this.lastName = lastName;
         this.email = email;
@@ -24,6 +25,7 @@ public class registrationDetails {
         this.phoneCode=phoneCode;
         this.phoneNumber = phoneNumber;
         this.password = password;
+        this.Date=Date;
     }
 
 
@@ -37,6 +39,14 @@ public class registrationDetails {
 
     public void setPhoneCode(String phoneCode) {
         this.phoneCode = phoneCode;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        Date = date;
     }
 
     public void setFirstname(String firstname) {
@@ -82,4 +92,5 @@ public class registrationDetails {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

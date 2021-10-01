@@ -23,6 +23,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+import java.util.Date;
+
 import org.jetbrains.annotations.NotNull;
 
 public class RegistrationPage extends AppCompatActivity {
@@ -57,6 +63,18 @@ public class RegistrationPage extends AppCompatActivity {
 
     }
 
+    public String getDate() {
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = new Date();
+        String input=dateFormat.format(date);
+        String output = input.substring(0, 10);
+        return output;
+    }
+    public void notNow(View view){
+        startActivity(new Intent(this,userLanding.class));
+    }
+
 
     public void Save(View view){
         try {
@@ -69,6 +87,7 @@ public class RegistrationPage extends AppCompatActivity {
             phoneNumber=findViewById(R.id.et_number);
             password=findViewById(R.id.et_password);
             save = findViewById(R.id.btn_register);
+            confPass=findViewById(R.id.et_confPass);
 
 
 //            dbref = FirebaseDatabase.getInstance().getReference().child("registrationDetails");
@@ -88,6 +107,8 @@ public class RegistrationPage extends AppCompatActivity {
             String PhoneCode=(phoneCode.getSelectedItem().toString());
            String PhoneNumber=(phoneNumber.getText().toString().trim());
            String Password=(password.getText().toString().trim());
+            String confPassword=(confPass.getText().toString().trim());
+            String date=getDate();
 
            if(FirstName.isEmpty()){
                firstName.setError("first name is required");
@@ -110,35 +131,42 @@ public class RegistrationPage extends AppCompatActivity {
                password.requestFocus();
                return;
            }
+           else if(!Password.equals(confPassword)){
+               Snackbar snackbar=Snackbar.make(save,"Passwords do not match.Please try again!!", Snackbar.LENGTH_LONG);
+               snackbar.show();
+               return;
+           }
 
            else {
 
-//            register.setEmail(email.getText().toString().trim());
-//            register.setPassword(password.getText().toString().trim());
-//
-//            String authEmail=register.getEmail();
-//            String authPassword=register.getPassword();
                mAuth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                    @Override
                    public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                        if (task.isSuccessful()) {
-                           registrationDetails register = new registrationDetails(FirstName, LastName, Email, Country, PhoneCode, PhoneNumber, Password);
+                           registrationDetails register = new registrationDetails(FirstName, LastName, Email, Country, PhoneCode, PhoneNumber, Password,date);
                            FirebaseDatabase.getInstance().getReference("registrationDetails")
                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(register).addOnCompleteListener(new OnCompleteListener<Void>() {
                                @Override
                                public void onComplete(@NonNull @NotNull Task<Void> task) {
                                    if (task.isSuccessful()) {
-                                       Toast.makeText(getApplicationContext(), "data sent to database successfully", Toast.LENGTH_LONG).show();
+                                       Snackbar snackbar=Snackbar.make(save,"Data Saved successfully for future use", Snackbar.LENGTH_LONG);
+                                       snackbar.show();
+
                                    } else {
-                                       Toast.makeText(getApplicationContext(), "error in sending data", Toast.LENGTH_LONG).show();
+                                       Snackbar snackbar=Snackbar.make(save,"server error in our side sorry for the inconvenience!", Snackbar.LENGTH_LONG);
+                                       snackbar.show();
                                    }
+
                                }
+
                            });
                        } else {
-                           Toast.makeText(getApplicationContext(), "error in sending data", Toast.LENGTH_LONG).show();
+                           Snackbar snackbar=Snackbar.make(save,"Check your Internet Connection and try again!!", Snackbar.LENGTH_LONG);
+                           snackbar.show();
                        }
                    }
                });
+               startActivity(new Intent(this,userLanding.class));
            }
 
         }catch(Exception e){
