@@ -54,7 +54,7 @@ public class userProfile extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.receiptBN:
-                        startActivity(new Intent(getApplicationContext(), ReceiptPage.class));
+                        startActivity(new Intent(getApplicationContext(), landingReceipt.class));
                         overridePendingTransition(0,0);
                         return true;
 
@@ -66,17 +66,19 @@ public class userProfile extends AppCompatActivity {
 //        getSupportActionBar().setTitle("Anjana");
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        profileImage=findViewById(R.id.im_profile);
-        fStore=FirebaseFirestore.getInstance();
-        logedInUser= FirebaseAuth.getInstance().getCurrentUser();
-        reference= FirebaseDatabase.getInstance().getReference("registrationDetails");
-        loggedInUserID=logedInUser.getUid();
+
 
         final TextView tv_name=findViewById(R.id.tv_updateuser);
         final TextView tv_email=findViewById(R.id.tv_email);
         final TextView tv_phoneNumber=findViewById(R.id.tv_phonenumber);
         final TextView tv_country=findViewById(R.id.tv_updateCountry);
-//        profileImage=findViewById(R.id.iv_image);
+        final TextView et_date=findViewById(R.id.et_date);
 
+        //        profileImage=findViewById(R.id.iv_image);
+        fStore=FirebaseFirestore.getInstance();
+        logedInUser= FirebaseAuth.getInstance().getCurrentUser();
+        reference= FirebaseDatabase.getInstance().getReference("registrationDetails");
+        loggedInUserID=logedInUser.getUid();
         reference.child(loggedInUserID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
@@ -88,11 +90,13 @@ public class userProfile extends AppCompatActivity {
                      String phoneCode=register.getPhoneCode();
                      String phoneNumber=register.getPhoneNumber();
                      String country=register.getCountry();
+                     String Date=register.getDate();
 
                      tv_name.setText(firstname+" "+lastName);
                      tv_email.setText(email);
                      tv_phoneNumber.setText(phoneCode+" "+phoneNumber);
                      tv_country.setText(country);
+                     et_date.setText(Date);
                  }
             }
 
