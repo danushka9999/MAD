@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -34,6 +36,27 @@ public class OrderList extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.personBN:
+                        startActivity(new Intent(getApplicationContext(), userProfile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.dashboardBN:
+                        return true;
+                    case R.id.receiptBN:
+                        startActivity(new Intent(getApplicationContext(), landingReceipt.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+                return false;
+            }
+
+        });
 
         recyclerView = findViewById(R.id.orderList);
         dbRef = FirebaseDatabase.getInstance().getReference().child("Meals").child(getuserId());

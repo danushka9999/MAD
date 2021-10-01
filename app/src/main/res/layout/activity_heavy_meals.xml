@@ -106,12 +106,10 @@
         android:layout_height="45dp"
         android:onClick="purchase"
         android:text="@string/btn_purchase"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_list_heavyMeals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.852"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_qty_heavyMeals"
-        app:layout_constraintVertical_bias="0.359" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/img_foodorder"

@@ -54,7 +54,7 @@ public class userProfile extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.receiptBN:
-                        startActivity(new Intent(getApplicationContext(), ReceiptPage.class));
+                        startActivity(new Intent(getApplicationContext(), landingReceipt.class));
                         overridePendingTransition(0,0);
                         return true;
 
