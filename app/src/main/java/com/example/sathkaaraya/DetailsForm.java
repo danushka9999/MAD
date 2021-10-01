@@ -133,10 +133,32 @@ public class DetailsForm extends AppCompatActivity {
     public void CreateData(View view) {
         dbRef = FirebaseDatabase.getInstance().getReference().child("FormDetails");
         try{
-            if(TextUtils.isEmpty(et_name.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
-            else if(TextUtils.isEmpty(et_roomNo.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
+            if(TextUtils.isEmpty(et_name.getText().toString())) {
+                et_name.setError("please enter a name");
+                et_name.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_roomNo.getText().toString())) {
+                et_roomNo.setError("please enter a Room Number");
+                et_roomNo.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_startDate.getText().toString())) {
+                Toast.makeText(getApplicationContext(), "Please enter a starting date", Toast.LENGTH_SHORT).show();
+            }
+            else if(TextUtils.isEmpty(et_endingDate.getText().toString())) {
+                Toast.makeText(getApplicationContext(), "Please enter a ending date", Toast.LENGTH_SHORT).show();
+            }
+            else if(TextUtils.isEmpty(et_NoOfAdults.getText().toString())) {
+                et_NoOfAdults.setError("please enter No of adults");
+                et_NoOfAdults.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_NoOfChildren.getText().toString())) {
+                et_NoOfChildren.setError("please enter No of children");
+                et_NoOfChildren.requestFocus();
+                return;
+            }
             else {
                 //take inputs from the user and assigning them to this instance (formObj) of the FormDetails..
                 formObj.setName(et_name.getText().toString().trim());
@@ -165,10 +187,32 @@ public class DetailsForm extends AppCompatActivity {
     public void Update(View view) {
         dbRef = FirebaseDatabase.getInstance().getReference().child("FormDetails");
         try{
-            if(TextUtils.isEmpty(et_name.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
-            else if(TextUtils.isEmpty(et_roomNo.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
+            if(TextUtils.isEmpty(et_name.getText().toString())) {
+                et_name.setError("please enter a name");
+                et_name.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_roomNo.getText().toString())) {
+                et_roomNo.setError("please enter a Room Number");
+                et_roomNo.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_startDate.getText().toString())) {
+                Toast.makeText(getApplicationContext(), "Please enter a starting date", Toast.LENGTH_SHORT).show();
+            }
+            else if(TextUtils.isEmpty(et_endingDate.getText().toString())) {
+                Toast.makeText(getApplicationContext(), "Please enter a ending date", Toast.LENGTH_SHORT).show();
+            }
+            else if(TextUtils.isEmpty(et_NoOfAdults.getText().toString())) {
+                et_NoOfAdults.setError("please enter No of adults");
+                et_NoOfAdults.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_NoOfChildren.getText().toString())) {
+                et_NoOfChildren.setError("please enter No of children");
+                et_NoOfChildren.requestFocus();
+                return;
+            }
             else {
                 //take inputs from the user and assigning them to this instance (formObj) of the FormDetails..
                 formObj.setName(et_name.getText().toString().trim());
