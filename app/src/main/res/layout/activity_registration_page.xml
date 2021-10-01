@@ -31,6 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
+                    android:textColor="@color/black"
                     android:layout_marginTop="36dp"
                     android:text="@string/tv_firstName"
                     app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +41,9 @@
                     android:id="@+id/et_lastName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="212dp"
+                    android:layout_marginStart="204dp"
                     android:text="@string/tv_lastName"
+                    android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="@+id/textView3"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/textView3"
@@ -51,6 +53,7 @@
                     android:id="@+id/et_firstName"
                     android:layout_width="150dp"
                     android:layout_height="42dp"
+                    android:paddingLeft="10dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="72dp"
                     android:layout_marginBottom="19dp"
@@ -69,6 +72,7 @@
                     android:layout_height="41dp"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/back"
+                    android:paddingLeft="10dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:textColor="@color/black"
@@ -82,6 +86,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
+                    android:textColor="@color/black"
                     android:layout_marginTop="188dp"
                     android:textCursorDrawable="@null"
                     android:text="@string/tv_email"
@@ -94,6 +99,7 @@
                     android:layout_height="45dp"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="52dp"
+                    android:paddingLeft="10dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="19dp"
                     android:background="@drawable/back"
@@ -126,6 +132,7 @@
                     android:background="@drawable/back"
                     android:textCursorDrawable="@null"
                     android:textColor="@color/black"
+                    android:paddingLeft="10dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -136,10 +143,10 @@
                     android:layout_width="350dp"
                     android:layout_height="47dp"
                     android:layout_marginStart="4dp"
-
                     android:layout_marginTop="28dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="19dp"
+                    android:paddingLeft="10dp"
                     android:background="@drawable/back"
                     app:layout_constraintBottom_toTopOf="@+id/tv_phoneNum"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -154,6 +161,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="404dp"
+                    android:textColor="@color/black"
                     android:text="@string/tv_phone_num"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -164,6 +172,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="292dp"
+                    android:textColor="@color/black"
                     android:text="@string/tv_country"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -174,6 +183,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="24dp"
+                    android:textColor="@color/black"
                     android:text="@string/tv_confirmPass"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -184,6 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="500dp"
+                    android:textColor="@color/black"
                     android:text="@string/tv_password"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -199,13 +210,14 @@
                     android:ems="10"
                     android:inputType="textPassword"
                     android:textColor="@color/black"
+                    android:paddingLeft="10dp"
                     android:textCursorDrawable="@null"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
                 <EditText
-                    android:id="@+id/editTextTextPassword2"
+                    android:id="@+id/et_confPass"
                     android:layout_width="350dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="4dp"
@@ -216,6 +228,7 @@
                     android:inputType="textPassword"
                     android:textColor="@color/black"
                     android:textCursorDrawable="@null"
+                    android:paddingLeft="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -228,6 +241,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="4dp"
+                    android:textColor="@color/black"
                     android:text="@string/tv_passRestrictions"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -244,7 +258,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+                    app:layout_constraintTop_toBottomOf="@+id/et_confPass" />
 
                 <CheckBox
                     android:id="@+id/checkBox"
@@ -273,6 +287,7 @@
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="4dp"
@@ -298,11 +313,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/btn_notnow"
                     android:layout_width="367dp"
                     android:layout_height="53dp"
-                    android:text="@string/btn_notNow"
                     android:backgroundTint="@color/white"
+                    android:onClick="notNow"
+                    android:text="@string/btn_notNow"
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.363"

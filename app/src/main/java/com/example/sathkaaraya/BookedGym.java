@@ -34,22 +34,25 @@ public class BookedGym extends Fragment {
     }
 
     @Override
+    //View operation with recycler view
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_booked_gym, container, false);
-
+        //Recycler view initialization
         recyclerView = view.findViewById(R.id.bookingList);
+        //database connectivity
         dbRef = FirebaseDatabase.getInstance().getReference().child("Booking").child(getuserId());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         list = new ArrayList<>();
+        //Gym adapter view
         gymAdapter = new GymAdapter(getActivity(),list);
         recyclerView.setAdapter(gymAdapter);
 
         dbRef.addValueEventListener(new ValueEventListener() {
-            @Override
+            @Override//fetching and adding data to list
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Booking book =  dataSnapshot.getValue(Booking.class);
@@ -58,7 +61,7 @@ public class BookedGym extends Fragment {
                 gymAdapter.notifyDataSetChanged();
             }
 
-            @Override
+            @Override//database error message
             public void onCancelled(@NonNull @NotNull DatabaseError error) {
 
             }

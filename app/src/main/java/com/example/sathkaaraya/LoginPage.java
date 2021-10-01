@@ -46,6 +46,10 @@ public class LoginPage extends AppCompatActivity {
 
     }
 
+    public void notNow(View view){
+        startActivity(new Intent(this,userLanding.class));
+    }
+
     public void signIn(View sign){
 
 
@@ -56,8 +60,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Snackbar snackbar=Snackbar.make(sign,"Login Success!", Snackbar.LENGTH_LONG);
-                    snackbar.show();
+
                     startActivity(new Intent(LoginPage.this,Services.class));
                 }else{
 //                    Toast.makeText(getApplicationContext(),"error in sign in",Toast.LENGTH_LONG).show();

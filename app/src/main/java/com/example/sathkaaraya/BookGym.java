@@ -146,20 +146,24 @@ public class BookGym extends Fragment {
                 dbRef = FirebaseDatabase.getInstance().getReference().child("Booking");
 
                 try{
+                    //error message when user did not select the date
                     if(dateselected == null || dateselected.isEmpty() || dateselected.trim().isEmpty()){
                         Toast.makeText(getActivity(),"Please select a date",Toast.LENGTH_LONG).show();
+                    //error message when user did not select the time
                     }else if(timeselected == null || timeselected.isEmpty() || timeselected.trim().isEmpty()){
                         Toast.makeText(getActivity(),"Please select a Time",Toast.LENGTH_LONG).show();
                     }else{
+                        //set the text field when user select the time and date
                         book.setDate(dateselected.trim());
                         book.setTime(timeselected.trim());
-
+                        //pushing the data to the text field
                         dbRef.child(getuserId()).push().setValue(book);
                         Toast.makeText(getActivity(),"Session Booked",Toast.LENGTH_LONG).show();
+                        //set text fields to default method
                         clearControls();
                         restartActivity(getActivity());
                     }
-
+                //catch method
                 }catch(NumberFormatException e){
                     Toast.makeText(getActivity(),"An Error occured",Toast.LENGTH_LONG).show();
                 }
