@@ -1,13 +1,18 @@
 package com.example.sathkaaraya;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class landingReceipt extends AppCompatActivity {
+    BottomNavigationView bottomNavigationView;
 
     Spinner packagename;
     EditText numDays;
@@ -30,6 +35,31 @@ public class landingReceipt extends AppCompatActivity {
 //        showBill=bill;
 //        return showBill;
 //    };
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setSelectedItemId(R.id.receiptBN);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.personBN:
+                        startActivity(new Intent(getApplicationContext(), userProfile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.dashboardBN:
+                        startActivity(new Intent(getApplicationContext(), Services.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.receiptBN:
+                        return true;
+
+                }
+                return false;
+            }
+
+        });
 
 
 

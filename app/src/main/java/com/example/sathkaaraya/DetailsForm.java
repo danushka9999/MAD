@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -43,6 +44,27 @@ public class DetailsForm extends AppCompatActivity {
         setContentView(R.layout.activity_details_form);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.personBN:
+                        startActivity(new Intent(getApplicationContext(), userProfile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.dashboardBN:
+                        return true;
+                    case R.id.receiptBN:
+                        startActivity(new Intent(getApplicationContext(), landingReceipt.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+                return false;
+            }
+
+        });
 
 
         et_name = findViewById(R.id.et_name);
@@ -111,10 +133,32 @@ public class DetailsForm extends AppCompatActivity {
     public void CreateData(View view) {
         dbRef = FirebaseDatabase.getInstance().getReference().child("FormDetails");
         try{
-            if(TextUtils.isEmpty(et_name.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
-            else if(TextUtils.isEmpty(et_roomNo.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
+            if(TextUtils.isEmpty(et_name.getText().toString())) {
+                et_name.setError("please enter a name");
+                et_name.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_roomNo.getText().toString())) {
+                et_roomNo.setError("please enter a Room Number");
+                et_roomNo.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_startDate.getText().toString())) {
+                Toast.makeText(getApplicationContext(), "Please enter a starting date", Toast.LENGTH_SHORT).show();
+            }
+            else if(TextUtils.isEmpty(et_endingDate.getText().toString())) {
+                Toast.makeText(getApplicationContext(), "Please enter a ending date", Toast.LENGTH_SHORT).show();
+            }
+            else if(TextUtils.isEmpty(et_NoOfAdults.getText().toString())) {
+                et_NoOfAdults.setError("please enter No of adults");
+                et_NoOfAdults.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_NoOfChildren.getText().toString())) {
+                et_NoOfChildren.setError("please enter No of children");
+                et_NoOfChildren.requestFocus();
+                return;
+            }
             else {
                 //take inputs from the user and assigning them to this instance (formObj) of the FormDetails..
                 formObj.setName(et_name.getText().toString().trim());
@@ -143,10 +187,32 @@ public class DetailsForm extends AppCompatActivity {
     public void Update(View view) {
         dbRef = FirebaseDatabase.getInstance().getReference().child("FormDetails");
         try{
-            if(TextUtils.isEmpty(et_name.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
-            else if(TextUtils.isEmpty(et_roomNo.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
+            if(TextUtils.isEmpty(et_name.getText().toString())) {
+                et_name.setError("please enter a name");
+                et_name.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_roomNo.getText().toString())) {
+                et_roomNo.setError("please enter a Room Number");
+                et_roomNo.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_startDate.getText().toString())) {
+                Toast.makeText(getApplicationContext(), "Please enter a starting date", Toast.LENGTH_SHORT).show();
+            }
+            else if(TextUtils.isEmpty(et_endingDate.getText().toString())) {
+                Toast.makeText(getApplicationContext(), "Please enter a ending date", Toast.LENGTH_SHORT).show();
+            }
+            else if(TextUtils.isEmpty(et_NoOfAdults.getText().toString())) {
+                et_NoOfAdults.setError("please enter No of adults");
+                et_NoOfAdults.requestFocus();
+                return;
+            }
+            else if(TextUtils.isEmpty(et_NoOfChildren.getText().toString())) {
+                et_NoOfChildren.setError("please enter No of children");
+                et_NoOfChildren.requestFocus();
+                return;
+            }
             else {
                 //take inputs from the user and assigning them to this instance (formObj) of the FormDetails..
                 formObj.setName(et_name.getText().toString().trim());

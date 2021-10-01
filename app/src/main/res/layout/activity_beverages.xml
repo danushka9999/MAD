@@ -142,12 +142,10 @@
         android:layout_width="146dp"
         android:layout_height="47dp"
         android:text="@string/btn_viewHeavyMealList"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_purchase_beverages"
         app:layout_constraintEnd_toStartOf="@+id/btn_purchase_beverages"
         app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_qty"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
         android:id="@+id/foodItemSpinner3"

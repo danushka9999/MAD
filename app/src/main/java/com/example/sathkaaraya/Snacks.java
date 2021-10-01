@@ -1,10 +1,12 @@
 package com.example.sathkaaraya;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -40,6 +42,27 @@ public class Snacks extends AppCompatActivity implements AdapterView.OnItemSelec
         editText_quantity_snacks = findViewById(R.id.et_qty_snacks);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.dashboardBN);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.personBN:
+                        startActivity(new Intent(getApplicationContext(), userProfile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.dashboardBN:
+                        return true;
+                    case R.id.receiptBN:
+                        startActivity(new Intent(getApplicationContext(), landingReceipt.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+                return false;
+            }
+
+        });
         //Setting the spinner array
         spinner2 = findViewById(R.id.foodItemSpinner2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.sanckItems, android.R.layout.simple_spinner_item);
