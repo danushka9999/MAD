@@ -91,6 +91,10 @@ public class landingReceipt extends AppCompatActivity {
             Foodbill=(2500*days);
             Gymbill=(1500*days);
             Travelbill=(22500*days);
+        } else if(pkName.equals("Lite")){
+            Foodbill=(1500*days);
+            Gymbill=(1000*days);
+            Travelbill=(15500*days);
         }
         else if(pkName.equals("Gold")){
             Foodbill=(4500*days);
@@ -125,4 +129,31 @@ public class landingReceipt extends AppCompatActivity {
     public int getDays(){
         return staticdays;
     }
+
+    public static int testFoodPrice(String packageName,int numdays){
+        if(packageName.equals("bronze")){
+            return numdays*1500;
+        }
+        else if(packageName.equals("gold")){
+            return numdays*2500;
+        }
+        else if(packageName.equals("lite")) {
+            return numdays * 1000;
+        }
+        else{
+            return numdays*3500;
+        }
+//
+
+
+    }
+//    if(packageName.equals("bronze")){
+//        return numdays*1500;
+//    }
+//        else if(packageName.equals("Gold")){
+//        return numdays*2500;
+//    }
+//        else {
+//        return numdays*3500;
+//    }
 }
