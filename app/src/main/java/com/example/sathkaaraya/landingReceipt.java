@@ -147,6 +147,23 @@ public class landingReceipt extends AppCompatActivity {
 
 
     }
+    public static int testGymPrice(String packageName,int numdays){
+        if(packageName.equals("bronze")){
+            return numdays*1500;
+        }
+        else if(packageName.equals("gold")){
+            return numdays*2500;
+        }
+        else if(packageName.equals("lite")) {
+            return numdays * 1000;
+        }
+        else{
+            return numdays*3200;
+        }
+//
+
+
+    }
 //    if(packageName.equals("bronze")){
 //        return numdays*1500;
 //    }
