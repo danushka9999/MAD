@@ -26,6 +26,7 @@
         <item>+01</item>
     </string-array>
     <string-array name="packages">
+        <item>Lite</item>
         <item>Bronze</item>
         <item>Gold</item>
         <item>Platinum</item>
